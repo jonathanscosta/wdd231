@@ -124,12 +124,14 @@ section p {
 #card {
     display: grid;
     gap: 10px;
+    grid-template-columns: 1fr 1fr ;
 }
 
 .card-curso {
     padding: 15px;
     border-radius: 5px;
     text-align: center;
+
 }
 
 .concluido {
@@ -148,7 +150,7 @@ section p {
 
 .botoes button {
     padding: 10px 20px;
-    
+
 }
 
 

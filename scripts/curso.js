@@ -117,13 +117,11 @@ function mostrarCursos(lista) {
 
 function calcularCreditos(lista) {
 
-    let total = 0;
-
     const cursosConcluidos = lista.filter((curso) => curso.concluido);
 
-    cursosConcluidos.forEach((curso) => {
-        total += curso.creditos;
-    });
+    const total = cursosConcluidos.reduce((soma, curso) => {
+        return soma + curso.creditos;
+    }, 0);
 
     return total;
 }
