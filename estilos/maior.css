@@ -1,0 +1,42 @@
+@media(min-width:700px) {
+
+
+    header,main,footer,nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 44px auto ;
+    }
+    span{
+        font-size: 1.5rem;
+    }
+
+    .menu-hamburger {
+        display: none;
+    }
+
+    .navegacao{
+        display: block;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        
+        
+    }
+    .navegacao ul{
+        display: flex;
+       
+    
+        
+    }
+    .navegacao li{
+         border-radius: 5px;
+    }
+
+    .navegacao a{
+        border: none;
+        margin:10px 50px;
+        
+    }
+}

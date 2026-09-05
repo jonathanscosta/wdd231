@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Francisco Jonathan Sousa da Costa">
+  <meta name="description" content="Página inicial do curso WDD231 de desenvolvimento web.">
+
+  <!-- ----------------CSS---------------- -->
+
+  <link rel="stylesheet" href="estilos/normaliza.css">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/maior.css">
+
+  <!-- ----------------FONTES---------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- ----------------JAVAsCRIPT---------------- -->
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
+
+  <title>Francisco Jonathan Sousa Da Costa | WDD231</title>
 </head>
+
 <body>
-    <h1>hello world</h1>
+  <header>
+    <img src="imagens/casa.svg" alt="logo do site em forma de casa">
+    <span>Francisco Jonathan Sousa da Costa</span>
+    <button id="ham-btn" class="menu-hamburger"></button>
+  </header>
+
+  <nav id="nav-menu" class="navegacao">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Projeto Câmara </a></li>
+      <li><a href="#">Projeto Final</a></li>
+
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Início</h1>
+
+    <div class="container">
+      <section class="sobreMim">
+        <h2>Sobre mim</h2>
+
+        <p>
+          Francisco Jonathan vem construindo sua trajetória com bastante dedicação aos estudos e à tecnologia: iniciou
+          sua formação em programação e desenvolvimento Full Stack, aprofundando conhecimentos em Python, HTML, CSS,
+          JavaScript, SQL, Flask, Django e outras ferramentas, enquanto também cursa Desenvolvimento de Software pela
+          BYU Pathway Worldwide, com o objetivo de consolidar uma carreira na área de tecnologia e transformar seus
+          conhecimentos em projetos próprios. Na vida familiar, é casado com Jessica e pai de Oliver, acompanhando
+          também a chegada de sua segunda filha, o que torna sua família uma das principais motivações para buscar
+          crescimento profissional e financeiro. Paralelamente, sua fé ocupa um lugar importante em sua vida: ele e sua
+          família são membros de A Igreja de Jesus Cristo dos Santos dos Últimos Dias, procurando compreender e aplicar
+          os ensinamentos do evangelho, das escrituras e dos princípios da Igreja no cotidiano. Em resumo, sua
+          trajetória reúne família, fé e busca constante por conhecimento, com uma caminhada de alguém que está tentando
+          construir, passo a passo, um futuro melhor por meio dos estudos, da tecnologia e de seus valores.
+        </p>
+      </section>
+
+      <section class="foto">
+        <h2>Foto do Estudante</h2>
+        <img src="imagens/foto_perfil.png" alt="foto do perfil do aluno">
+      </section>
+
+      <section class="cursos">
+        <h2>Cursos de Certificado Web</h2>
+
+        <div class="botoes">
+          <button id="todos">Todos</button>
+          <button id="wdd">WDD</button>
+          <button id="cse">CSE</button>
+        </div>
+
+        <div id="card"></div>
+
+        <p id="creditos"></p>
+
+    </div>
+
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="midia">
+      <a href="https://www.linkedin.com/in/jonathan-costa-15b882378/" target="_blank"><img src="imagens/linkedin.svg"
+          alt="icone do linkedin"></a>
+      <a href="https://www.facebook.com/jonathan.oconors" target="_blank"><img src="imagens/facebook.svg"
+          alt="icone do facebook"></a>
+      <a href="https://github.com/jonathanscosta" target="_blank"><img src="imagens/github.svg"
+          alt="icone do github"></a>
+    </div>
+
+    <div class="ano-atual">
+      <span id="anoAtual"></span>
+      <p id="ultima-atualizacao"></p>
+    </div>
+  </footer>
 </body>
+
 </html>

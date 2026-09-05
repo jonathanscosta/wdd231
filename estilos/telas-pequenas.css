@@ -1,0 +1,187 @@
+:root {
+    --borda: #9e9e9e;
+    --backgroud-menu: #eee;
+    --fonte-titulo: 'Poppins', Arial, Helvetica, sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+body{
+    padding: 0 0 50px 0;
+}
+main,
+nav,
+footer {
+
+    margin: 0 10px;
+}
+
+/* ================================CABECALHO================================ */
+
+header {
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    padding: 5px 10px;
+    column-gap: 10px;
+    border-bottom: 1px solid var(--borda);
+    font-family: var(--fonte-titulo);
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+span {
+
+    font-family: var(--fonte-titulo);
+}
+
+.menu-hamburger {
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu-hamburger::after {
+    content: " \2630";
+}
+
+.menu-hamburger.aberto::after {
+    content: "\00d7";
+
+}
+
+/* ================================NAVEGACAO================================ */
+
+.navegacao {
+    display: none;
+    background-color: var(--backgroud-menu);
+    margin: 0 10px;
+    font-family: var(--fonte-corpo);
+}
+
+.navegacao.aberto {
+    display: block;
+}
+
+.navegacao ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.navegacao a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 10px 0;
+    justify-content: center;
+    padding: 5px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.navegacao li:hover {
+    background-color: var(--borda);
+}
+
+/* ================================MAIN================================ */
+
+section {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--backgroud-menu);
+    border-radius: 5px;
+    border-radius: 5px;
+}
+
+section h2 {
+    background-color: var(--borda);
+    border-radius: 5px 5px 0 0;
+}
+
+section p {
+    font-family: var(--fonte-corpo);
+    font-size: .8rem;
+    margin: 10px;
+    padding: 10px 0;
+}
+
+.foto img {
+    margin: 20px auto;
+    padding: 10px;
+}
+
+
+/* ================================CARDS================================ */
+#card {
+    display: grid;
+    gap: 10px;
+}
+
+.card-curso {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.concluido {
+    background-color: #b7e4c7;
+}
+
+.nao-concluido {
+    background-color: #f4b6b6;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    
+}
+
+
+/* ================================FOOTER================================ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+
+    
+}
+.midia{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.midia img{
+    width: 44px;
+    height: 44px;
+}
+.ano-atual{
+    background-color: var(--backgroud-menu);
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+}
+
+
