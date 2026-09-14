@@ -35,6 +35,10 @@ p {
 a {
     color: inherit;
 }
+ul{
+    margin: 0;
+    padding: 0;
+}
 
 
 
@@ -72,4 +76,8 @@ button {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+nav{
+    margin: 0;
 }

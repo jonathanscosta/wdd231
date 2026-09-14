@@ -1,0 +1,95 @@
+:root{
+    --font-titulo:'Poppins',Georgia, 'Times New Roman', Times, serif;
+    --font-corpo:'Roboto', sans-serif;
+    --fundoMenu: #eee;
+    --fundos: #b1b1b1;
+}
+
+
+
+
+/* CABECALHO */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0px auto;
+    padding: 5px;
+    font-family: var(--font-titulo);
+    background-color: var(--fundos);
+   
+    
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.botao-hamburguer{
+    background: none;
+    border: none;
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    
+
+}
+
+/* NAVEGAÇÃO */
+#navegacao {
+    display: none;
+}
+
+#navegacao.aberto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-corpo);
+    
+    
+}
+
+#navegacao ul {
+    list-style: none;
+    width: 100%;
+    
+}
+#navegacao li{
+    background-color: var(--fundoMenu);
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+#navegacao li.atual{
+    background-color: var(--fundos);
+}
+#navegacao a {
+    text-decoration: none;
+}
+#navegacao a[aria-current="page"]{
+    background-color: var(--fundos);
+}
+
+/* CORPO DO SITE */
+
+.hero{
+    width: 100%;
+    margin: 5px auto;
+}
+.hero img {
+width: 100%;
+height: auto;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,40 @@
+@media (min-width: 700px){
+    
+    header{
+        justify-content: start;
+        position: relative;
+    }
+
+    #ham-btn{
+        display: none;
+    }
+
+    #navegacao {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+      #navegacao ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+    #navegacao li{
+        border-radius: 5px;
+        background-color: var(--fundos);
+        cursor: pointer;
+        
+    }
+    #navegacao a[aria-current="page"]{
+    background-color: var(--fundoMenu);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+};

@@ -1,0 +1,65 @@
+[
+  {
+    "Nome": "Arthon Móveis & Design",
+    "Endereço": "Rua das Acácias, 145, Centro, Arthon",
+    "Telefone": "(85) 3333-1045",
+    "URL do site": "https://www.arthonmoveisedesign.com",
+    "Imagem": "",
+    "Nível de associação": "ouro",
+    "Outras informações": "Empresa especializada em móveis planejados para residências e ambientes comerciais."
+  },
+  {
+    "Nome": "TechNova Soluções Digitais",
+    "Endereço": "Avenida Central, 820, Distrito Empresarial, Arthon",
+    "Telefone": "(85) 3333-2187",
+    "URL do site": "https://www.technovasolucoes.com",
+    "Imagem": "",
+    "Nível de associação": "prata",
+    "Outras informações": "Desenvolvimento de sistemas, sites e soluções digitais para pequenas e médias empresas."
+  },
+  {
+    "Nome": "Mercado Boa Praça",
+    "Endereço": "Rua São Miguel, 312, Vila Nova, Arthon",
+    "Telefone": "(85) 3333-4572",
+    "URL do site": "https://www.mercadoboapraca.com",
+    "Imagem": "",
+    "Nível de associação": "membro",
+    "Outras informações": "Mercado local com produtos alimentícios, bebidas, produtos de higiene e itens para o dia a dia."
+  },
+  {
+    "Nome": "Construtora Horizonte",
+    "Endereço": "Avenida dos Pioneiros, 560, Jardim Arthon, Arthon",
+    "Telefone": "(85) 3333-6791",
+    "URL do site": "https://www.construtorahorizonte.com",
+    "Imagem": "",
+    "Nível de associação": "ouro",
+    "Outras informações": "Construtora especializada em projetos residenciais, comerciais e reformas."
+  },
+  {
+    "Nome": "Café Estação Arthon",
+    "Endereço": "Praça da Estação, 78, Centro, Arthon",
+    "Telefone": "(85) 3333-7824",
+    "URL do site": "https://www.cafeestacaoarthon.com",
+    "Imagem": "",
+    "Nível de associação": "prata",
+    "Outras informações": "Cafeteria com cafés especiais, lanches artesanais, doces e espaço para reuniões."
+  },
+  {
+    "Nome": "Clínica Vida Plena",
+    "Endereço": "Rua das Palmeiras, 201, Bairro Primavera, Arthon",
+    "Telefone": "(85) 3333-8456",
+    "URL do site": "https://www.clinicavidaplenarthon.com",
+    "Imagem": "",
+    "Nível de associação": "membro",
+    "Outras informações": "Clínica multidisciplinar com atendimento em diferentes áreas de cuidados e bem-estar."
+  },
+  {
+    "Nome": "Logística Rota Norte",
+    "Endereço": "Rodovia Arthon Norte, Km 8, Distrito Industrial, Arthon",
+    "Telefone": "(85) 3333-9630",
+    "URL do site": "https://www.rotanortelogistica.com",
+    "Imagem": "",
+    "Nível de associação": "prata",
+    "Outras informações": "Empresa de transporte, distribuição e soluções logísticas para empresas da região."
+  }
+]
