@@ -56,12 +56,13 @@ header img {
     list-style: none;
     width: 100%;
     
+    
 }
 #navegacao li{
     background-color: var(--fundoMenu);
-    margin: 5px;
     padding: 5px;
     text-align: center;
+    margin: 3px 0;
 }
 #navegacao li.atual{
     background-color: var(--fundos);
@@ -75,13 +76,49 @@ header img {
 
 /* CORPO DO SITE */
 
+main{
+    font-family: var(--font-corpo);
+}
+main h1{
+    font-family: var(--font-titulo);
+    text-align: center;
+}
+
 .hero{
     width: 100%;
-    margin: 5px auto;
+    margin: 0 auto;
 }
 .hero img {
 width: 100%;
 height: auto;
+}
+
+/* CARDS */
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    box-sizing: border-box;
+}
+.card h2{
+    align-items: center;
+}
+.card img{
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.card p{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* FOOTER */
