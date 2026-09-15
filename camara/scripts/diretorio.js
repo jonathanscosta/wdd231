@@ -53,7 +53,7 @@ function ver_cards(empresas) {
         card.classList.add("card")
         card.innerHTML = `
             <h2>${empresa.Nome}</h2>
-            <img src="${empresa.Imagem}" alt="${empresa.Nome}" loading="lazy">
+            <img src="${empresa.Imagem}" alt="${empresa.Nome}" width="600" height="400" loading="lazy">
             <p>${empresa.Endereço}</p>
             <p>Tel.: ${empresa.Telefone}</p>
             <p>Site: ${empresa["URL do site"]}</p>
@@ -136,6 +136,8 @@ ver_empresas();
 
 const ano = new Date().getFullYear();
 
-document.querySelector("#anoAtual").textContent = `©${ano} Francisco Jonathan Sousa Da Costa`;
+document.querySelector("#anoAtual").textContent =
+    `© ${ano} Câmara de Comércio`;
 
-document.querySelector("#ultima-atualizacao").textContent = document.lastModified;
+document.querySelector("#ultima-atualizacao").textContent =
+    document.lastModified;
