@@ -93,6 +93,32 @@ width: 100%;
 height: auto;
 }
 
+#botoes{
+    text-align: center;
+    margin: 10px;
+    
+}
+#botao-card,
+#botao-lista {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background-color: var(--fundos);
+    color: #222;
+    font-family: var(--font-titulo);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botao-card:hover,
+#botao-lista:hover {
+    background-color: #555;
+    color: white;
+    transform: scale(1.05);
+}
+
 /* CARDS */
 .card{
     display: flex;
@@ -120,6 +146,62 @@ height: auto;
     flex-direction: column;
     justify-content: center;
 }
+
+
+#lista_de_empresas {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 95%;
+    min-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: var(--font-corpo);
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+    background-color: var(--fundos);
+}
+
+th {
+    padding: 12px 10px;
+    text-align: left;
+    font-family: var(--font-titulo);
+    font-weight: 600;
+}
+
+td {
+    padding: 12px 10px;
+    border-top: 1px solid #aaa;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d5d5d5;
+}
+
+tbody tr:hover {
+    background-color: #c0c0c0;
+}
+
+table a {
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
 
 /* FOOTER */
 

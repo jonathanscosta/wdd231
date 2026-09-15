@@ -50,7 +50,7 @@
 
     }
 
-    #Lista_de_empresas {
+    #lista_de_empresas {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -58,8 +58,25 @@
     .card {
         transition: 0.3s;
     }
-    .card:hover{
+
+    .card:hover {
         transform: scale(1.02);
     }
-}
 
+    #lista_de_empresas {
+        width: 95%;
+        margin: 30px auto;
+        
+    }
+
+    table {
+        width: 100%;
+        min-width: 0;
+        
+    }
+
+    th,
+    td {
+        padding: 14px;
+    }
+}
