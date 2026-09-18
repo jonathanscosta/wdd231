@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diretório</title>
+
+    <meta name="description"
+        content="site da camara de comércio da cidade fictícia de Arthon, mostrando empresas e demais novidades do comércio local">
+    <meta name="author" content="Francisco Jonathan Sousa da Costa">
+
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <meta property="og:title" content="Câmara de comércio de Arthon, com todas as suas empresas e informações">
+    <meta property="og:description"
+        content="Câmara de comércio de Arthon, site para unir nossos empresários com os moradores">
+    <meta property="og:image" content="https://jonathanscosta.github.io/wdd231/camara/imagens/logo_camara.webp">
+    <meta property="og:url" content="https://jonathanscosta.github.io/wdd231/camara/diretorio.html">
+
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/index.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo_camara.webp" alt="Logo da câmara de comércio" width="150" height="82">
+        <div></div>
+        <span>Câmara de Comércio de Arthon</span>
+        <button id="ham-btn"></button>
+
+    </header>
+    <nav id="navegacao">
+        <ul>
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li class="atual"><a href="diretorio.html" >Diretório</a></li>
+            <li><a href="associar.html">Associar-se</a></li>
+            <li><a href="descobrir.html">Descobrir</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="hero">
+            <img src="imagens/imagem_hero.webp" alt="cidade de arthon" width="300" height="164" fetchpriority="high">
+        </div>
+        <h1>Página Inicial</h1>
+
+        
+    </main>
+    <footer>
+
+
+        <div class="footer-conteudo">
+
+            <div class="footer-titulo">
+                <h2>CÂMARA DE COMÉRCIO</h2>
+            </div>
+
+            <div class="footer-contato">
+                <p>Rua das Acácias, 100</p>
+                <p>Arthon, Estado</p>
+                <p>E-mail: contato@camaraarthon.com</p>
+                <p>Telefone: (85) 3333-0000</p>
+
+                <div class="redes-sociais">
+                    <a href="https://www.youtube.com/watch?v=RELXqbIH4MY" aria-label="YouTube" target="_blank"><img src="imagens/youtube.svg" alt="icone do youtube"></a>
+                    <a href="https://www.linkedin.com/in/jonathan-costa-15b882378/" aria-label="LinkedIn" target="_blank"><img src="imagens/linkedin.svg" alt="linkedin"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-informacoes">
+            <p>Francisco Jonathan Sousa da Costa</p>
+            <p>WDD 231</p>
+            <p id="anoAtual"></p>
+            <p>Última modificação: <span id="ultima-atualizacao"></span></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
