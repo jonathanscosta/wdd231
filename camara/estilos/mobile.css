@@ -219,12 +219,16 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    text-align: center;
+    
 }
 
 .footer-titulo h2 {
     margin: 0;
     font-family: var(--font-titulo);
     font-size: 1.3rem;
+    
 }
 
 .footer-contato p {
@@ -234,13 +238,19 @@ footer {
 .redes-sociais {
     display: flex;
     gap: 20px;
+    justify-content: center;
     margin-top: 20px;
+    
 }
 
 .redes-sociais a {
+    
     color: #222;
     text-decoration: none;
     font-weight: 600;
+    width: 50px;
+    height: auto;
+    
 }
 
 .redes-sociais a:hover {
@@ -252,8 +262,10 @@ footer {
     padding-top: 15px;
     border-top: 1px solid #777;
     text-align: center;
+    
 }
 
 .footer-informacoes p {
     margin: 7px 0;
+    
 }
