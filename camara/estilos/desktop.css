@@ -106,6 +106,9 @@
         margin: 0 auto;
 
     }
+    .evento{
+        width: 100%;
+    }
 
     .tempo {
         width: 80%;

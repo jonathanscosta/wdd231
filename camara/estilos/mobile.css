@@ -131,28 +131,28 @@ main h1 {
     z-index: 100;
     animation: pulsar 2.5s infinite;
     cursor: pointer;
-
-}
-
-.acao-btn a {
     text-decoration: none;
     font-family: var(--font-titulo);
+    padding: 5px;
+
 }
+
+
 
 @keyframes pulsar {
     0% {
 
-        box-shadow: 0 0 0 0 var(--verde-claro);
+       
         transform: scale(1);
     }
 
     50% {
-        box-shadow: 0 0 5px 5px var(--verde-claro);
+       
         transform: scale(1.1);
     }
 
     100% {
-        box-shadow: 0 0 0 0 var(--verde-claro);
+        
         transform: scale(1);
     }
 }
@@ -176,6 +176,7 @@ main h1 {
     margin: 0 auto;
     padding: 0 20px;
     margin-top: 20px;
+    width: 95%;
 }
 
 .evento h2 {
@@ -202,6 +203,7 @@ main h1 {
     font-family: var(--font-corpo);
 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    min-height: 250px;
 }
 
 .clima-atual {
@@ -490,11 +492,17 @@ footer {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    
+
+}
+
+.redes-sociais img{
     width: 40px;
     height: 40px;
     display: block;
-
 }
+
+
 
 .redes-sociais a {
 
