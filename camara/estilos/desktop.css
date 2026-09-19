@@ -100,4 +100,85 @@
         top: 300px;
         text-shadow: 0 5px 20px var(--funto-texto);
     }
+
+    .eventos_atuais{
+        max-width: 900px;
+        margin: 0 auto;
+
+    }
+
+    .tempo {
+        width: 80%;
+        max-width: 900px;
+        margin: 30px auto;
+    }
+
+    .clima {
+        padding: 30px;
+    }
+
+    .clima-atual h3 {
+        font-size: 4rem;
+    }
+
+    .clima-atual p {
+        font-size: 1.3rem;
+    }
+
+    .previsao {
+        gap: 20px;
+    }
+
+    .dia {
+        padding: 20px;
+    }
+
+    .dia h3 {
+        font-size: 1.2rem;
+    }
+
+    .dia p {
+        font-size: 1.5rem;
+    }
+
+     .empresas_em_destaque {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+
+    .empresa-card {
+        margin-bottom: 0;
+        padding: 25px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+
+    .empresa-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .empresa-card h3 {
+        font-size: 1.4rem;
+    }
+
+
+    .empresa-card img {
+        width: 140px;
+        height: 140px;
+    }
+
+
 }

@@ -154,6 +154,15 @@ main h1 {
     }
 }
 
+/* CARDS PARA EVENTOS */
+.lista-eventos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+}
+
+
 .evento{
     border: 1px solid var(--fundos);
     border-radius: 5px;
@@ -163,12 +172,169 @@ main h1 {
     justify-content: center;
     margin: 0 auto;
     padding: 0 20px;
+    margin-top: 20px;
 }
 .evento h2{
     border-bottom: 1px solid var(--fundos);
     text-align: center;
 }
 
+
+/* CARDS PARA A PREVISÃO DO TEMPO */
+
+
+.tempo {
+    width: 95%;
+    margin: 25px auto;
+}
+
+.clima {
+    background-color: var(--fundo-cards);
+    border: 1px solid var(--fundos);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    font-family: var(--font-corpo);
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.clima-atual {
+    text-align: center;
+    border-bottom: 1px solid var(--fundos);
+    padding-bottom: 15px;
+}
+
+.clima-atual h3 {
+    margin: 0;
+    font-family: var(--font-titulo);
+    font-size: 3rem;
+    
+}
+
+.clima-atual p {
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.previsao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dia {
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 8px;
+    background-color: var(--fundoMenu);
+
+    transition: 0.3s;
+}
+
+.dia:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dia h3 {
+    margin: 0;
+    font-family: var(--font-titulo);
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.dia p {
+    margin: 8px 0 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+}
+
+/* CARDS DE EMPRESAS EM DESTQUE */
+/* ================================
+   EMPRESAS EM DESTAQUE
+================================ */
+
+.empresas_em_destaque {
+    width: 95%;
+    margin: 30px auto;
+}
+
+.empresas_em_destaque h2 {
+    text-align: center;
+    font-family: var(--font-titulo);
+    margin-bottom: 20px;
+}
+
+
+/* CARD DA EMPRESA */
+
+.empresa-card {
+    background-color: var(--fundo-cards);
+    border: 1px solid var(--fundos);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* NOME DA EMPRESA */
+
+.empresa-card h3 {
+    font-family: var(--font-titulo);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* LOGO */
+
+.empresa-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+/* INFORMAÇÕES */
+
+.empresa-card p {
+    font-family: var(--font-corpo);
+    margin: 8px 0;
+}
+
+
+/* LINK DO SITE */
+
+.empresa-card a {
+    
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.empresa-card a:hover {
+    text-decoration: underline;
+    
+}
+
+
+/* NÍVEL DE ASSOCIAÇÃO */
+
+.empresa-card p:last-child {
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 
 #botoes {
