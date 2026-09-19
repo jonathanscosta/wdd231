@@ -26,25 +26,25 @@ const eventos = document.querySelector("#eventos_atuais");
 
 async function buscarEmpresas() {
 
-    
+
     const resposta = await fetch("dados/membros.json");
 
-    
+
     const empresas = await resposta.json();
 
-    
+
     const empresasPermitidas = empresas.filter(empresa =>
         empresa["Nível de associação"] === "ouro" ||
         empresa["Nível de associação"] === "prata"
     );
 
-    
+
     empresasPermitidas.sort(() => Math.random() - 0.5);
 
-    
+
     const destaques = empresasPermitidas.slice(0, 3);
 
-    
+
     destaques.forEach(empresa => {
 
         empresas_em_destaque.innerHTML += `
@@ -53,7 +53,9 @@ async function buscarEmpresas() {
                 <h3>${empresa.Nome}</h3>
 
                 <img src="${empresa.Imagem}" 
-                     alt="Logo da empresa ${empresa.Nome}">
+                    alt="Logo da empresa ${empresa.Nome}"
+                    width="140"
+                    height="140">
 
                 <p>${empresa.Telefone}</p>
 
@@ -121,7 +123,7 @@ async function buscarClima() {
     const dados = await resposta.json();
 
 
-    
+
 
     clima.innerHTML = `
         <div class="clima-atual">
@@ -154,13 +156,13 @@ async function buscarClima() {
     `;
 
 
-    
+
 
     document.querySelector("#temperatura").textContent =
         `${Math.round(dados.main.temp)} °C`;
 
 
-    
+
 
     document.querySelector("#descricao").textContent =
         dados.weather[0].description;
@@ -181,21 +183,21 @@ async function buscarPrevisao() {
     console.log(dados);
 
 
-    
+
 
     const dias = {};
 
 
-    
+
 
     dados.list.forEach(previsao => {
 
-     
+
 
         const data = previsao.dt_txt.split(" ")[0];
 
 
-      
+
 
         if (!dias[data]) {
             dias[data] = [];
@@ -208,12 +210,12 @@ async function buscarPrevisao() {
     });
 
 
-    
-
-    
 
 
-    
+
+
+
+
 
     const datas = Object.keys(dias).slice(0, 3);
 
@@ -221,24 +223,24 @@ async function buscarPrevisao() {
 
     datas.forEach((data, index) => {
 
-       
+
 
         const temperaturas = dias[data];
 
 
-       
+
 
         const maiorTemperatura =
             Math.max(...temperaturas);
 
 
-       
+
 
         const dataFormatada =
             new Date(`${data}T12:00:00`);
 
 
-        
+
 
         const nomeDia =
             dataFormatada.toLocaleDateString("pt-BR", {
@@ -246,13 +248,13 @@ async function buscarPrevisao() {
             });
 
 
-        
+
 
         document.querySelector(`#dia${index + 1}`).textContent =
             nomeDia;
 
 
-      
+
 
         document.querySelector(`#temp${index + 1}`).textContent =
             `${Math.round(maiorTemperatura)} °C`;

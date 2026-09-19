@@ -1,14 +1,14 @@
 :root {
-    --font-titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
+    --font-titulo: 'Poppins', sans-serif;
     --font-corpo: 'Roboto', sans-serif;
     --fundoMenu: #eee;
     --fundos: #b1b1b1;
     --verde-claro: rgb(1, 193, 1);
     --verde-escuro: green;
-    --funto-texto:#7B2CBF;
-    --fundo-cards:#cac7c7;
+    --funto-texto: #7B2CBF;
+    --fundo-cards: #cac7c7;
 
-    
+
 
 }
 
@@ -100,7 +100,7 @@ main h1 {
 .hero {
     width: 100%;
     margin: 0 auto;
-    
+
 
 }
 
@@ -108,10 +108,11 @@ main h1 {
     width: 100%;
     height: auto;
 }
-.frase-hero{
+
+.frase-hero {
     position: absolute;
     left: 5%;
-    top:100px;
+    top: 100px;
     font-family: var(--font-titulo);
     background-color: var(--fundo-gradiente);
     font-weight: bold;
@@ -130,9 +131,10 @@ main h1 {
     z-index: 100;
     animation: pulsar 2.5s infinite;
     cursor: pointer;
-    
+
 }
-.acao-btn a{
+
+.acao-btn a {
     text-decoration: none;
     font-family: var(--font-titulo);
 }
@@ -164,7 +166,7 @@ main h1 {
 }
 
 
-.evento{
+.evento {
     border: 1px solid var(--fundos);
     border-radius: 5px;
     background-color: var(--fundo-cards);
@@ -175,7 +177,8 @@ main h1 {
     padding: 0 20px;
     margin-top: 20px;
 }
-.evento h2{
+
+.evento h2 {
     border-bottom: 1px solid var(--fundos);
     text-align: center;
 }
@@ -211,7 +214,7 @@ main h1 {
     margin: 0;
     font-family: var(--font-titulo);
     font-size: 3rem;
-    
+
 }
 
 .clima-atual p {
@@ -252,7 +255,7 @@ main h1 {
     margin: 8px 0 0;
     font-size: 1.2rem;
     font-weight: 700;
-    
+
 }
 
 /* CARDS DE EMPRESAS EM DESTQUE */
@@ -316,7 +319,7 @@ main h1 {
 /* LINK DO SITE */
 
 .empresa-card a {
-    
+
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
@@ -324,7 +327,7 @@ main h1 {
 
 .empresa-card a:hover {
     text-decoration: underline;
-    
+
 }
 
 
@@ -487,6 +490,9 @@ footer {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    display: block;
 
 }
 
