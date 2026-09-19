@@ -19,6 +19,8 @@ hamBtn.addEventListener("click", () => {
 
 })
 
+// MAIN
+    
 
 
 // FOOTER

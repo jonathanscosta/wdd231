@@ -1,8 +1,13 @@
-:root{
-    --font-titulo:'Poppins',Georgia, 'Times New Roman', Times, serif;
-    --font-corpo:'Roboto', sans-serif;
+:root {
+    --font-titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
+    --font-corpo: 'Roboto', sans-serif;
     --fundoMenu: #eee;
     --fundos: #b1b1b1;
+    --verde-claro: rgb(1, 193, 1);
+    --verde-escuro: green;
+    --funto-texto:#7B2CBF;
+    
+
 }
 
 
@@ -19,8 +24,8 @@ header {
     padding: 5px;
     font-family: var(--font-titulo);
     background-color: var(--fundos);
-   
-    
+
+
 }
 
 header img {
@@ -29,12 +34,12 @@ header img {
     border-radius: 50%;
 }
 
-.botao-hamburguer{
+.botao-hamburguer {
     background: none;
     border: none;
     font-family: var(--font-titulo);
     font-size: 2rem;
-    
+
 
 }
 
@@ -48,56 +53,113 @@ header img {
     flex-direction: column;
     align-items: center;
     font-family: var(--font-corpo);
-    
-    
+
+
 }
 
 #navegacao ul {
     list-style: none;
     width: 100%;
-    
-    
+
+
 }
-#navegacao li{
+
+#navegacao li {
     background-color: var(--fundoMenu);
     padding: 5px;
     text-align: center;
     margin: 3px 0;
 }
-#navegacao li.atual{
+
+#navegacao li.atual {
     background-color: var(--fundos);
 }
+
 #navegacao a {
     text-decoration: none;
 }
-#navegacao a[aria-current="page"]{
+
+#navegacao a[aria-current="page"] {
     background-color: var(--fundos);
 }
 
 /* CORPO DO SITE */
 
-main{
+main {
     font-family: var(--font-corpo);
 }
-main h1{
+
+main h1 {
     font-family: var(--font-titulo);
     text-align: center;
 }
 
-.hero{
+.hero {
     width: 100%;
     margin: 0 auto;
-}
-.hero img {
-width: 100%;
-height: auto;
+    position: relative;
+
 }
 
-#botoes{
-    text-align: center;
-    margin: 10px;
+.hero img {
+    width: 100%;
+    height: auto;
+}
+.frase-hero{
+    position: absolute;
+    left: 25%;
+    top:90px;
+    font-family: var(--font-titulo);
+    background-color: var(--fundo-gradiente);
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--funto-texto);
+    color: var(--fundoMenu);
+    font-size: 20px;
+}
+
+.acao-btn {
+    background-color: var(--verde-claro);
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 200px;
+    z-index: 100;
+    animation: pulsar 2.5s infinite;
+    cursor: pointer;
     
 }
+.acao-btn a{
+    text-decoration: none;
+    font-family: var(--font-titulo);
+}
+
+@keyframes pulsar {
+    0% {
+
+        box-shadow: 0 0 0 0 var(--verde-claro);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 5px 5px var(--verde-claro);
+        transform: scale(1.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 var(--verde-claro);
+        transform: scale(1);
+    }
+}
+
+
+
+#botoes {
+    text-align: center;
+    margin: 10px;
+
+}
+
 #botao-card,
 #botao-lista {
     padding: 10px 20px;
@@ -120,7 +182,7 @@ height: auto;
 }
 
 /* CARDS */
-.card{
+.card {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -131,17 +193,20 @@ height: auto;
     align-items: center;
     box-sizing: border-box;
 }
-.card h2{
+
+.card h2 {
     align-items: center;
 }
-.card img{
+
+.card img {
     width: 250px;
     height: 167px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
 }
-.card p{
+
+.card p {
     margin: 10px 0;
     display: flex;
     flex-direction: column;
@@ -221,14 +286,14 @@ footer {
     gap: 20px;
     align-items: center;
     text-align: center;
-    
+
 }
 
 .footer-titulo h2 {
     margin: 0;
     font-family: var(--font-titulo);
     font-size: 1.3rem;
-    
+
 }
 
 .footer-contato p {
@@ -240,17 +305,17 @@ footer {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
-    
+
 }
 
 .redes-sociais a {
-    
+
     color: #222;
     text-decoration: none;
     font-weight: 600;
     width: 50px;
     height: auto;
-    
+
 }
 
 .redes-sociais a:hover {
@@ -262,10 +327,10 @@ footer {
     padding-top: 15px;
     border-top: 1px solid #777;
     text-align: center;
-    
+
 }
 
 .footer-informacoes p {
     margin: 7px 0;
-    
+
 }
