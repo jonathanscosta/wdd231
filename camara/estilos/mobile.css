@@ -89,6 +89,7 @@ header img {
 
 main {
     font-family: var(--font-corpo);
+    position: relative;
 }
 
 main h1 {
@@ -99,7 +100,7 @@ main h1 {
 .hero {
     width: 100%;
     margin: 0 auto;
-    position: relative;
+    
 
 }
 
@@ -109,14 +110,14 @@ main h1 {
 }
 .frase-hero{
     position: absolute;
-    left: 25%;
-    top:90px;
+    left: 5%;
+    top:100px;
     font-family: var(--font-titulo);
     background-color: var(--fundo-gradiente);
     font-weight: bold;
     text-shadow: 0 0 10px var(--funto-texto);
     color: var(--fundoMenu);
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 .acao-btn {
@@ -125,7 +126,7 @@ main h1 {
     border-radius: 5px;
     position: absolute;
     right: 10px;
-    top: 200px;
+    top: 150px;
     z-index: 100;
     animation: pulsar 2.5s infinite;
     cursor: pointer;
@@ -255,9 +256,7 @@ main h1 {
 }
 
 /* CARDS DE EMPRESAS EM DESTQUE */
-/* ================================
-   EMPRESAS EM DESTAQUE
-================================ */
+
 
 .empresas_em_destaque {
     width: 95%;
