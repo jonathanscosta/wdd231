@@ -202,7 +202,7 @@ main h1 {
 
     font-family: var(--font-corpo);
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    
     min-height: 250px;
 }
 
@@ -243,7 +243,7 @@ main h1 {
 
 .dia:hover {
     transform: translateY(-3px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    
 }
 
 .dia h3 {
@@ -285,7 +285,7 @@ main h1 {
     margin-bottom: 20px;
     text-align: center;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    
 }
 
 
@@ -351,10 +351,9 @@ main h1 {
 #botao-lista {
     padding: 10px 20px;
     margin: 0 5px;
-    border: 1px solid #777;
+    border: 1px solid var(--fundos);
     border-radius: 5px;
     background-color: var(--fundos);
-    color: #222;
     font-family: var(--font-titulo);
     font-weight: 600;
     cursor: pointer;
@@ -363,8 +362,8 @@ main h1 {
 
 #botao-card:hover,
 #botao-lista:hover {
-    background-color: #555;
-    color: white;
+    background-color: var(--fundos);
+    color: var(--fundoMenu);
     transform: scale(1.05);
 }
 
@@ -372,7 +371,7 @@ main h1 {
 .card {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid var(--fundos);
     width: 80%;
     margin: 10px auto;
     padding: 10px;
@@ -414,8 +413,8 @@ table {
     margin: 0 auto;
     border-collapse: collapse;
     font-family: var(--font-corpo);
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: var(--fundoMenu);
+    box-shadow: 0 2px 8px var(--fundos);
 }
 
 thead {
@@ -431,23 +430,23 @@ th {
 
 td {
     padding: 12px 10px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid var(--fundos);
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #eeeeee;
+    background-color: var(--fundoMenu);
 }
 
 tbody tr:nth-child(even) {
-    background-color: #d5d5d5;
+    background-color: var(--fundo-cards);
 }
 
 tbody tr:hover {
-    background-color: #c0c0c0;
+    background-color: var(--fundos);
 }
 
 table a {
-    color: #222;
+    
     font-weight: 600;
     text-decoration: none;
 }
@@ -464,7 +463,8 @@ footer {
     padding: 30px 20px 15px;
     background-color: var(--fundos);
     font-family: var(--font-corpo);
-    color: #222;
+    margin-bottom: 150px;
+    
 }
 
 .footer-conteudo {
@@ -506,7 +506,7 @@ footer {
 
 .redes-sociais a {
 
-    color: #222;
+    
     text-decoration: none;
     font-weight: 600;
     width: 50px;
@@ -521,7 +521,7 @@ footer {
 .footer-informacoes {
     margin-top: 25px;
     padding-top: 15px;
-    border-top: 1px solid #777;
+    border-top: 1px solid var(--fundo-cards);
     text-align: center;
 
 }

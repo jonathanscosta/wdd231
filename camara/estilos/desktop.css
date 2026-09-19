@@ -5,6 +5,10 @@
         position: relative;
     }
 
+    footer{
+        margin-bottom: 10px;
+    }
+
     #ham-btn {
         display: none;
     }
