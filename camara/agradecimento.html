@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Obrigado | Câmara de Comércio de Arthon</title>
+
+    <meta name="description"
+        content="Confirmação do formulário de associação da Câmara de Comércio de Arthon.">
+
+    <meta name="author"
+        content="Francisco Jonathan Sousa da Costa">
+
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <meta property="og:title"
+        content="Obrigado | Câmara de Comércio de Arthon">
+
+    <meta property="og:description"
+        content="Confirmação do formulário de associação da Câmara de Comércio de Arthon.">
+
+    <meta property="og:image"
+        content="https://jonathanscosta.github.io/wdd231/camara/imagens/logo_camara.webp">
+
+    <meta property="og:url"
+        content="https://jonathanscosta.github.io/wdd231/camara/agradecimento.html">
+
+  
+
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/agradecimento.css">
+    <link rel="stylesheet" href="estilos/agradecimento_grande.css">
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/agradecimento.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <img
+            src="imagens/logo_camara.webp"
+            alt="Logo da Câmara de Comércio"
+            width="150"
+            height="82">
+
+        <span>Câmara de Comércio de Arthon</span>
+
+        <button
+            id="ham-btn"
+            aria-label="Abrir menu">
+        </button>
+
+    </header>
+
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav id="navegacao">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="diretorio.html">Diretório</a>
+            </li>
+
+            <li class="atual">
+                <a href="associacao.html">
+                    Associar-se
+                </a>
+            </li>
+
+            <li>
+                <a href="descobrir.html">Descobrir</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+        <section class="confirmacao">
+
+            <h1>Obrigado pelo seu interesse!</h1>
+
+            <p>
+                Seu formulário de associação foi enviado com sucesso.
+            </p>
+
+
+            <div class="dados-formulario">
+
+                <h2>Informações enviadas</h2>
+
+
+                <p>
+                    <strong>Nome:</strong>
+                    <span id="resultadoNome"></span>
+                </p>
+
+
+                <p>
+                    <strong>Sobrenome:</strong>
+                    <span id="resultadoSobrenome"></span>
+                </p>
+
+
+                <p>
+                    <strong>E-mail:</strong>
+                    <span id="resultadoEmail"></span>
+                </p>
+
+
+                <p>
+                    <strong>Telefone:</strong>
+                    <span id="resultadoTelefone"></span>
+                </p>
+
+
+                <p>
+                    <strong>Empresa/Organização:</strong>
+                    <span id="resultadoOrganizacao"></span>
+                </p>
+
+
+                <p>
+                    <strong>Data e hora do envio:</strong>
+                    <span id="resultadoDataHora"></span>
+                </p>
+
+            </div>
+
+
+            <a
+                class="botao-voltar"
+                href="associacao.html">
+
+                Voltar para o formulário
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-titulo">
+
+                <h2>CÂMARA DE COMÉRCIO</h2>
+
+            </div>
+
+
+            <div class="footer-contato">
+
+                <p>Rua das Acácias, 100</p>
+
+                <p>Arthon, Estado</p>
+
+                <p>
+                    E-mail: contato@camaraarthon.com
+                </p>
+
+                <p>
+                    Telefone: (85) 3333-0000
+                </p>
+
+
+                <div class="redes-sociais">
+
+                    <a
+                        href="https://www.youtube.com/watch?v=RELXqbIH4MY"
+                        aria-label="YouTube"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img
+                            src="imagens/youtube.svg"
+                            alt="Ícone do YouTube"
+                            width="40"
+                            height="40">
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/jonathan-costa-15b882378/"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img
+                            src="imagens/linkedin.svg"
+                            alt="Ícone do LinkedIn"
+                            width="40"
+                            height="40">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-informacoes">
+
+            <p>
+                Francisco Jonathan Sousa da Costa
+            </p>
+
+            <p>
+                WDD 231
+            </p>
+
+            <p id="anoAtual"></p>
+
+            <p>
+                Última modificação:
+                <span id="ultima-atualizacao"></span>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+

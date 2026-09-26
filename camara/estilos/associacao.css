@@ -1,0 +1,301 @@
+
+:root {
+    --font-titulo: 'Poppins', sans-serif;
+    --font-corpo: 'Roboto', sans-serif;
+    --fundoMenu: #eee;
+    --fundos: #b1b1b1;
+    --verde-claro: rgb(1, 193, 1);
+    --verde-escuro: green;
+    --funto-texto: #7B2CBF;
+    --fundo-cards: #cac7c7;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: var(--font-titulo);
+    background-color: var(--fundos);
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.botao-hamburguer {
+    background: none;
+    border: none;
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+}
+
+
+/* NAVEGAÇÃO */
+
+#navegacao {
+    display: none;
+}
+
+#navegacao.aberto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-corpo);
+}
+
+#navegacao ul {
+    list-style: none;
+    width: 100%;
+}
+
+#navegacao li {
+    background-color: var(--fundoMenu);
+    padding: 5px;
+    text-align: center;
+    margin: 3px 0;
+}
+
+#navegacao li.atual {
+    background-color: var(--fundos);
+}
+
+#navegacao a {
+    text-decoration: none;
+}
+
+#navegacao a[aria-current="page"] {
+    background-color: var(--fundos);
+}
+
+
+/* ASSOSIAR-SE */
+
+main {
+    font-family: var(--font-corpo);
+    position: relative;
+    padding: 1rem;
+}
+
+main h1 {
+    font-family: var(--font-titulo);
+    text-align: center;
+}
+
+
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form > label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: bold;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* FIELDSET */
+
+fieldset {
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+fieldset label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: normal;
+}
+
+
+/* BOTAO */
+
+form button {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--verde-claro);
+    font-family: var(--font-titulo);
+    font-weight: 600;
+}
+
+
+/* FOCO */
+input:focus,
+textarea:focus,
+button:focus,
+a:focus {
+    outline: 3px solid #f4b400;
+    outline-offset: 2px;
+}
+
+
+/* CARDS */
+
+.cartoes-associacao {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cartao {
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #555;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: aparecerCartao 0.8s ease forwards;
+}
+
+.nivel-np {
+    animation-delay: 0.1s;
+}
+
+.nivel-bronze {
+    animation-delay: 0.3s;
+}
+
+.nivel-prata {
+    animation-delay: 0.5s;
+}
+
+.nivel-ouro {
+    animation-delay: 0.7s;
+}
+
+
+@keyframes aparecerCartao {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* MODAIS */
+
+dialog {
+    width: min(90%, 500px);
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+dialog button {
+    margin-top: 1rem;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 40px;
+    padding: 30px 20px 15px;
+    background-color: var(--fundos);
+    font-family: var(--font-corpo);
+    margin-bottom: 150px;
+}
+
+.footer-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-titulo h2 {
+    margin: 0;
+    font-family: var(--font-titulo);
+    font-size: 1.3rem;
+}
+
+.footer-contato p {
+    margin: 6px 0;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.redes-sociais img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+    font-weight: 600;
+    width: 50px;
+    height: auto;
+}
+
+.redes-sociais a:hover {
+    text-decoration: underline;
+}
+
+.footer-informacoes {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--fundo-cards);
+    text-align: center;
+}
+
+.footer-informacoes p {
+    margin: 7px 0;
+}

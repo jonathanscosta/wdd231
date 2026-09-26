@@ -1,24 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Associar-se a câmara de comércio</title>
+
+    <title>Associar-se à Câmara de Comércio de Arthon</title>
+
     <meta name="description"
-        content="site da camara de comércio da cidade fictícia de Arthon, mostrando empresas e demais novidades do comércio local">
+        content="Página de associação da Câmara de Comércio da cidade fictícia de Arthon.">
+
     <meta name="author" content="Francisco Jonathan Sousa da Costa">
 
     <link rel="icon" href="imagens/favicon.ico">
 
-    <meta property="og:title" content="Câmara de comércio de Arthon, com todas as suas empresas e informações">
+    <meta property="og:title"
+        content="Câmara de Comércio de Arthon">
+
     <meta property="og:description"
-        content="Câmara de comércio de Arthon, site para unir nossos empresários com os moradores">
-    <meta property="og:image" content="https://jonathanscosta.github.io/wdd231/camara/imagens/logo_camara.webp">
-    <meta property="og:url" content="https://jonathanscosta.github.io/wdd231/camara/index.html">
+        content="Página de associação da Câmara de Comércio de Arthon.">
+
+    <meta property="og:image"
+        content="https://jonathanscosta.github.io/wdd231/camara/imagens/logo_camara.webp">
+
+    <meta property="og:url"
+        content="https://jonathanscosta.github.io/wdd231/camara/associacao.html">
 
     <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/mobile.css">
-    <link rel="stylesheet" href="estilos/desktop.css">
+    <link rel="stylesheet" href="estilos/associacao.css">
+    <link rel="stylesheet" href="estilos/associacao_grande.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,56 +40,478 @@
         rel="stylesheet">
 
     <script src="scripts/associacao.js" defer></script>
+
 </head>
+
 <body>
+
+    <!-- CABEÇALHO -->
+
     <header>
-         <span>Câmara de Comércio de Arthon</span>
+
+        <img
+            src="imagens/logo_camara.webp"
+            alt="Logo da Câmara de Comércio"
+            width="150"
+            height="82">
+
+        <span>Câmara de Comércio de Arthon</span>
+
         <button id="ham-btn"></button>
+
     </header>
 
-     <nav id="navegacao">
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav id="navegacao">
+
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="diretorio.html">Diretório</a></li>
-            <li class="atual"><a href="associar.html"  aria-current="page">Associar-se</a></li>
-            <li><a href="descobrir.html">Descobrir</a></li>
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="diretorio.html">Diretório</a>
+            </li>
+
+            <li class="atual">
+                <a href="associacao.html" aria-current="page">
+                    Associar-se
+                </a>
+            </li>
+
+            <li>
+                <a href="descobrir.html">Descobrir</a>
+            </li>
+
         </ul>
+
     </nav>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
 
     <main>
 
+        <h1>Formulário de Associação</h1>
+
+        <div class="area-associacao">
+
+            <!-- FORMULÁRIO -->
+
+            <form action="agradecimento.html" method="get">
+
+                <label>
+                    Nome
+
+                    <input
+                        type="text"
+                        name="nome"
+                        title="Digite seu primeiro nome."
+                        autocomplete="given-name"
+                        required>
+                </label>
+
+
+                <label>
+                    Sobrenome
+
+                    <input
+                        type="text"
+                        name="sobrenome"
+                        title="Digite seu sobrenome."
+                        autocomplete="family-name"
+                        required>
+                </label>
+
+
+                <label>
+                    Cargo na organização
+
+                    <input
+                        type="text"
+                        name="cargo"
+                        title="Digite seu cargo na organização."
+                        autocomplete="organization-title"
+                        pattern="[A-Za-zÀ-ÿ\s-]{7,}">
+                </label>
+
+
+                <label>
+                    Endereço de e-mail
+
+                    <input
+                        type="email"
+                        name="email"
+                        title="Digite seu endereço de e-mail."
+                        autocomplete="email"
+                        placeholder="exemplo@email.com"
+                        required>
+                </label>
+
+
+                <label>
+                    Número de celular
+
+                    <input
+                        type="tel"
+                        name="telefone"
+                        title="Digite seu número de celular."
+                        autocomplete="tel"
+                        required>
+                </label>
+
+
+                <label>
+                    Nome da empresa/organização
+
+                    <input
+                        type="text"
+                        name="organizacao"
+                        title="Digite o nome da empresa ou organização."
+                        autocomplete="organization"
+                        required>
+                </label>
+
+
+                <!-- NÍVEL DE ASSOCIAÇÃO -->
+
+                <fieldset>
+
+                    <legend>Nível de associação</legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="np"
+                            required>
+
+                        Associação NP
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="bronze">
+
+                        Associação Bronze
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="silver">
+
+                        Associação Prata
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="gold">
+
+                        Associação Ouro
+                    </label>
+
+                </fieldset>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <label>
+                    Descrição da atividade/organização
+
+                    <textarea
+                        name="descricao"
+                        title="Descreva a atividade da empresa ou organização."
+                        rows="5"></textarea>
+                </label>
+
+
+                <!-- DATA E HORA -->
+
+                <input
+                    type="hidden"
+                    name="dataHora"
+                    id="dataHora">
+
+
+                <!-- ENVIO -->
+
+                <button type="submit">
+                    Enviar formulário
+                </button>
+
+            </form>
+
+
+            <!-- CARTÕES DOS NÍVEIS -->
+
+            <section class="cartoes-associacao">
+
+                <h2>Níveis de Associação</h2>
+
+
+                <article class="cartao nivel-np">
+
+                    <h3>Associação NP</h3>
+
+                    <p>
+                        Para organizações sem fins lucrativos.
+                    </p>
+
+                    <a href="#modal-np">
+                        Mais informações
+                    </a>
+
+                </article>
+
+
+                <article class="cartao nivel-bronze">
+
+                    <h3>Associação Bronze</h3>
+
+                    <p>
+                        Recursos básicos para sua organização.
+                    </p>
+
+                    <a href="#modal-bronze">
+                        Mais informações
+                    </a>
+
+                </article>
+
+
+                <article class="cartao nivel-prata">
+
+                    <h3>Associação Prata</h3>
+
+                    <p>
+                        Mais benefícios para empresas em crescimento.
+                    </p>
+
+                    <a href="#modal-prata">
+                        Mais informações
+                    </a>
+
+                </article>
+
+
+                <article class="cartao nivel-ouro">
+
+                    <h3>Associação Ouro</h3>
+
+                    <p>
+                        Maior visibilidade e benefícios exclusivos.
+                    </p>
+
+                    <a href="#modal-ouro">
+                        Mais informações
+                    </a>
+
+                </article>
+
+            </section>
+
+        </div>
+
+
+        <!-- MODAL NP -->
+
+        <dialog id="modal-np">
+
+            <h2>Associação NP</h2>
+
+            <p>
+                A Associação NP é destinada a organizações sem fins
+                lucrativos.
+            </p>
+
+            <ul>
+                <li>Sem taxa de associação.</li>
+                <li>Acesso a eventos da Câmara.</li>
+                <li>Participação em atividades comunitárias.</li>
+            </ul>
+
+            <button class="fechar-modal">
+                Fechar
+            </button>
+
+        </dialog>
+
+
+        <!-- MODAL BRONZE -->
+
+        <dialog id="modal-bronze">
+
+            <h2>Associação Bronze</h2>
+
+            <p>
+                A associação Bronze oferece recursos básicos para
+                empresas e organizações.
+            </p>
+
+            <ul>
+                <li>Acesso a eventos empresariais.</li>
+                <li>Descontos em eventos selecionados.</li>
+                <li>Acesso a treinamentos.</li>
+            </ul>
+
+            <button class="fechar-modal">
+                Fechar
+            </button>
+
+        </dialog>
+
+
+        <!-- MODAL PRATA -->
+
+        <dialog id="modal-prata">
+
+            <h2>Associação Prata</h2>
+
+            <p>
+                A associação Prata oferece benefícios adicionais
+                para empresas que desejam aumentar sua presença.
+            </p>
+
+            <ul>
+                <li>Todos os benefícios Bronze.</li>
+                <li>Descontos maiores em eventos.</li>
+                <li>Treinamentos exclusivos.</li>
+                <li>Publicidade no site da Câmara.</li>
+            </ul>
+
+            <button class="fechar-modal">
+                Fechar
+            </button>
+
+        </dialog>
+
+
+        <!-- MODAL OURO -->
+
+        <dialog id="modal-ouro">
+
+            <h2>Associação Ouro</h2>
+
+            <p>
+                A associação Ouro oferece o maior conjunto de
+                benefícios da Câmara.
+            </p>
+
+            <ul>
+                <li>Todos os benefícios Prata.</li>
+                <li>Publicidade em posição de destaque.</li>
+                <li>Eventos especiais.</li>
+                <li>Treinamentos exclusivos.</li>
+                <li>Maior visibilidade para a organização.</li>
+            </ul>
+
+            <button class="fechar-modal">
+                Fechar
+            </button>
+
+        </dialog>
+
     </main>
 
+
+    <!-- RODAPÉ -->
+
     <footer>
+
         <div class="footer-conteudo">
 
             <div class="footer-titulo">
+
                 <h2>CÂMARA DE COMÉRCIO</h2>
+
             </div>
+
 
             <div class="footer-contato">
+
                 <p>Rua das Acácias, 100</p>
+
                 <p>Arthon, Estado</p>
-                <p>E-mail: contato@camaraarthon.com</p>
-                <p>Telefone: (85) 3333-0000</p>
+
+                <p>
+                    E-mail: contato@camaraarthon.com
+                </p>
+
+                <p>
+                    Telefone: (85) 3333-0000
+                </p>
+
 
                 <div class="redes-sociais">
-                    <a href="https://www.youtube.com/watch?v=RELXqbIH4MY" aria-label="YouTube" target="_blank"><img
-                            src="imagens/youtube.svg" alt="Ícone do YouTube" width="40" height="40"></a>
-                    <a href="https://www.linkedin.com/in/jonathan-costa-15b882378/" aria-label="LinkedIn"
-                        target="_blank"><img src="imagens/linkedin.svg" alt="Ícone do LinkedIn" width="40"
-                            height="40"></a>
+
+                    <a
+                        href="https://www.youtube.com/watch?v=RELXqbIH4MY"
+                        aria-label="YouTube"
+                        target="_blank">
+
+                        <img
+                            src="imagens/youtube.svg"
+                            alt="Ícone do YouTube"
+                            width="40"
+                            height="40">
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/jonathan-costa-15b882378/"
+                        aria-label="LinkedIn"
+                        target="_blank">
+
+                        <img
+                            src="imagens/linkedin.svg"
+                            alt="Ícone do LinkedIn"
+                            width="40"
+                            height="40">
+
+                    </a>
+
                 </div>
+
             </div>
 
         </div>
 
+
         <div class="footer-informacoes">
-            <p>Francisco Jonathan Sousa da Costa</p>
-            <p>WDD 231</p>
+
+            <p>
+                Francisco Jonathan Sousa da Costa
+            </p>
+
+            <p>
+                WDD 231
+            </p>
+
             <p id="anoAtual"></p>
-            <p>Última modificação: <span id="ultima-atualizacao"></span></p>
+
+            <p>
+                Última modificação:
+                <span id="ultima-atualizacao"></span>
+            </p>
+
         </div>
+
     </footer>
+
 </body>
+
 </html>
+

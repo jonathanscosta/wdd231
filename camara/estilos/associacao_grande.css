@@ -1,0 +1,99 @@
+
+@media screen and (min-width: 700px) {
+
+
+    /* CABEÇALHO */
+
+    header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .botao-hamburguer {
+    display: none;
+}
+
+
+
+    /* NAVEGAÇÃO */
+
+    #navegacao {
+        display: flex;
+        justify-content: center;
+        font-family: var(--font-corpo);
+        margin-top: 10px;
+        
+    }
+
+    #navegacao ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    #navegacao li {
+        margin: 0;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+    #navegacao li:hover {
+        transform: scale(1.1);
+    }
+
+    #navegacao a {
+        text-decoration: none;
+    }
+   
+
+    
+
+
+    /* ASSOCIAR-SE */
+
+    .area-associacao {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+
+    /* CARDS */
+
+    .cartoes-associacao {
+        margin-top: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .redes-sociais {
+        justify-content: flex-start;
+    }
+
+    .footer-informacoes {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
