@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Página Inicial Câmara de Comércio de Arthon</title>
-
+    <title>Associar-se a câmara de comércio</title>
     <meta name="description"
         content="site da camara de comércio da cidade fictícia de Arthon, mostrando empresas e demais novidades do comércio local">
     <meta name="author" content="Francisco Jonathan Sousa da Costa">
@@ -30,57 +27,28 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
 
-    <script src="scripts/index.js" defer></script>
-
+    <script src="scripts/associacao.js" defer></script>
 </head>
-
 <body>
     <header>
-        <img src="imagens/logo_camara.webp" alt="Logo da câmara de comércio" width="150" height="82">
-    
-        <span>Câmara de Comércio de Arthon</span>
+         <span>Câmara de Comércio de Arthon</span>
         <button id="ham-btn"></button>
-
     </header>
-    <nav id="navegacao">
+
+     <nav id="navegacao">
         <ul>
-            <li class="atual"><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="diretorio.html">Diretório</a></li>
-            <li><a href="associar.html">Associar-se</a></li>
+            <li class="atual"><a href="associar.html"  aria-current="page">Associar-se</a></li>
             <li><a href="descobrir.html">Descobrir</a></li>
         </ul>
     </nav>
+
     <main>
-        <div class="hero">
-            <img src="imagens/hero.webp" alt="cidade de arthon" width="300" height="164" fetchpriority="high">
-        </div>
-        <p class="frase-hero">Fortaleça seu negócio <br> e faça parte da nossa <br> comunidade.</p>
-        <a href="associar.html" id="acao-btn" class="acao-btn">Associar-se</a>
-        <h1>Página Inicial</h1>
-
-        <section id="eventos_atuais" class="eventos_atuais">
-            <div id="evento" class="evento">
-
-            </div>
-
-        </section>
-
-        <section id="tempo" class="tempo">
-            <div id="clima" class="clima">
-
-            </div>
-
-        </section>
-
-        <section id="empresas_em_destaque" class="empresas_em_destaque">
-
-        </section>
-
 
     </main>
+
     <footer>
-
-
         <div class="footer-conteudo">
 
             <div class="footer-titulo">
@@ -110,9 +78,6 @@
             <p id="anoAtual"></p>
             <p>Última modificação: <span id="ultima-atualizacao"></span></p>
         </div>
-
     </footer>
-
 </body>
-
 </html>
