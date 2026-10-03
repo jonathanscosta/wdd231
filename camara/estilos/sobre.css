@@ -81,7 +81,66 @@ header img {
     text-decoration: none;
 }
 
+/* MAIN */
 
+h1 {
+    margin: 20px auto;
+    font-family: var(--font-titulo);
+    text-align: center;
+}
+.cards{
+    min-height: 1700px;
+}
+
+.cartoes {
+    border-radius: 5px;
+    border: 1px solid var(--verde-escuro);
+    margin: 10px 20px;
+    display: grid;
+    font-family: var(--font-corpo);
+    grid-template-areas:
+
+    "nome"
+    "imagem"
+    "descricao"
+    "endereco"
+    "botao";
+
+    background-color: var(--fundo-cards);
+}
+.cartoes img{
+    object-fit: cover;
+    grid-area: imagem;
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    aspect-ratio: 3 / 2;
+}
+.cartoes h2{
+    grid-area:nome;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cartoes p{
+    grid-area: descricao;
+    text-align: center;
+    margin: 10px 20px;
+}
+.cartoes span{
+    grid-area: endereco;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.cartoes .botao_saiba_mais{
+    background-color: var(--verde-claro);
+    margin: 10px 30px;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    grid-area: botao;
+}
 
 
 

@@ -1,0 +1,12 @@
+@media  (min-width: 600px){
+    .cartoes {
+   
+    grid-template-areas:
+    "imagem nome"
+    "imagem descricao"
+    "imagem endereco"
+    "botao botao";
+
+    background-color: var(--fundo-cards);
+}
+}

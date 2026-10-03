@@ -57,6 +57,18 @@
     }
 
 
+    /* MAIN */
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 900px;
+    }
+    .cartoes{
+        display: flex;
+        flex-direction: column;
+    }
+
+
      /* FOOTER */
 
     .footer-conteudo {
