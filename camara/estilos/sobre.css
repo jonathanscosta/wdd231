@@ -118,6 +118,11 @@ h1 {
    
 
 }
+
+.cartoes:hover{
+
+   box-shadow: 0 0 5px var(--verde-escuro);
+}
 .cartoes h2{
     grid-area:nome;
     text-align: center;
