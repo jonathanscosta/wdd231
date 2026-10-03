@@ -115,6 +115,8 @@ h1 {
     width: 300px;
     height: 200px;
     aspect-ratio: 3 / 2;
+   
+
 }
 .cartoes h2{
     grid-area:nome;
