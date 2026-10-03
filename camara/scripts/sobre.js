@@ -34,6 +34,54 @@ hamBtn.addEventListener("click", () => {
 
 // MAIN
 
+
+// VERIFICANDO A DATA DA ÚLTIMA VEZ QUE O USUÁRIO ENTROU NO SISTEMA
+
+const mensagemVisita = document.querySelector("#mensagem_visita");
+
+const ultimaVisita = localStorage.getItem("ultimaVisita");
+
+const agora = Date.now();
+
+const milissegundosPorDia = 1000 * 60 * 60 * 24;
+
+
+if (ultimaVisita === null) {
+
+    mensagemVisita.textContent =
+        "Boas-vindas! Entre em contato conosco caso tenha alguma dúvida.";
+
+} else {
+
+    const diferenca = agora - Number(ultimaVisita);
+
+    const dias = Math.floor(
+        diferenca / milissegundosPorDia
+    );
+
+
+    if (dias < 1) {
+
+        mensagemVisita.textContent =
+            "Já voltou? Que legal!";
+
+    } else {
+
+        const palavraDia = dias === 1 ? "dia" : "dias";
+
+        mensagemVisita.textContent =
+            `Seu último acesso foi há ${dias} ${palavraDia}.`;
+
+    }
+
+}
+
+
+localStorage.setItem("ultimaVisita", agora);
+
+
+// CONSTRUINDO CARDS
+
 const cards = document.querySelector("#cards")
 
 locais.forEach((local => {

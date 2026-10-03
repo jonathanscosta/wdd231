@@ -88,6 +88,12 @@ h1 {
     font-family: var(--font-titulo);
     text-align: center;
 }
+
+#mensagem_visita{
+    font-family: var(--font-corpo);
+    margin: 20px;
+    font-size: 1.1rem;
+}
 .cards{
     min-height: 1700px;
 }
