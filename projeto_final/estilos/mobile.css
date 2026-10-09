@@ -1,0 +1,33 @@
+
+
+:root{
+    --fonte_titulo: 'Poppins',Georgia, 'Times New Roman', Times, serif;
+}
+
+
+header, nav, main, footer{
+    min-width: 300px;
+    max-width: 100px;
+}
+header{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    
+}
+
+header img{
+    width: 90px;
+    height: auto;
+    margin : 20px;
+    border-radius: 50%;
+}
+header span{
+    font-size: 1rem;
+    margin-left: 20px;
+    font-family: var(--fonte_titulo)
+}
+
+header nav{
+    margin-left: 50%;
+}
