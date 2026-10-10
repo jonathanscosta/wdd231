@@ -27,19 +27,6 @@
     }
 
 
-    /* MAIN */
-    main{
-        background-color: var(--cinza);
-    }
-    #dashboard{
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-    }
-
-    #menu_lateral{
-        border: 2px solid var(--laranja);
-        min-height: 100px;
-    }
 
 
 

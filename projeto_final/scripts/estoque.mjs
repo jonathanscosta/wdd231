@@ -19,22 +19,21 @@ menu_ham.addEventListener("click", () => {
     }
 });
 
-// MAIN COM DASHBOAD E MENU LATERAL
+// MAIN
 
-const dashboar = document.querySelector("#dashboard")
+export async function bucar_produtos() {
 
-const menu_lateral = document.querySelector("#menu_lateral");
-const menu = document.querySelector("#menu");
-menu_lateral.appendChild(menu)
-const cards_dashboard = document.querySelector("#cards_dashboard");
-const h1 = document.createElement("h1")
-h1.textContent = "testando a div"
-cards_dashboard.appendChild(h1);
+    const resposta = await fetch("https://dummyjson.com/products")
 
-dashboar.appendChild(menu_lateral)
-dashboar.appendChild(cards_dashboard)
+    if(!resposta.ok){
+        throw new Error("Não foi encontrado o produto");
+    }
 
+    const dados = await resposta.json()
 
+    return dados
+    
+}
 
 
 
