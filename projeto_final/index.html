@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="estilos/mobile.css">
     <link rel="stylesheet" href="estilos/desktop.css">
 
+    <link rel="icon" href="imagens/favicon.ico">
+
     <title>Wayne Corp</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,18 +29,23 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
 
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/main.js " defer></script>
 
 </head>
 
 <body>
     <header>
-        <img src="imagens/logo_wayne.webp" alt="logotipo da wayne corp">
+        <a href="index.html"><img src="imagens/logo_wayne.webp" alt="logotipo da wayne corp" width="50" height="40"></a>
         <span>Wayne Corp</span>
 
-        <nav>
+        <button id="menu_ham" type="button" ></button>
+        
+
+        <nav aria-label="Navegação principal" class="navegacao" id="navegacao">
             <ul>
-                <li><a href="">Usuários</a></li>
+                <li><a href="index.html" aria-current="page" class="destaque">Página Inicial</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="processos.html">Processos</a></li>
             </ul>
         </nav>
     </header>

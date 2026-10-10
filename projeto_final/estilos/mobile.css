@@ -2,32 +2,73 @@
 
 :root{
     --fonte_titulo: 'Poppins',Georgia, 'Times New Roman', Times, serif;
+    --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
+    --azul: #1E3A5F;
+    --verde:#2E7D32;
+    --laranja: #F9A825;
+    --cinza: #F5F7FA;
+    --branco: #fff;
 }
 
 
 header, nav, main, footer{
-    min-width: 300px;
-    max-width: 100px;
+    min-width: 320px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-header{
+
+header {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
-    
+    gap: 10px 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--azul);
+    padding: 1.2rem;
+   
+   
+}
+
+header span{
+    margin: 20px;
+    color: var(--branco);
 }
 
 header img{
-    width: 90px;
-    height: auto;
-    margin : 20px;
+  
     border-radius: 50%;
-}
-header span{
-    font-size: 1rem;
-    margin-left: 20px;
-    font-family: var(--fonte_titulo)
+    width: 100%;
 }
 
-header nav{
-    margin-left: 50%;
+#navegacao {
+    display: none;
+}
+#navegacao.aberto{
+    display: block;
+    text-align: center;
+}
+
+.navegacao li {
+    list-style: none;
+    margin: 10px 0;
+}
+.navegacao a{
+    text-decoration: none;
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navegacao a[aria-current]{
+    background-color: var(--cinza);
+    color: var(--azul);
+}
+
+#menu_ham{
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 2rem;
 }
