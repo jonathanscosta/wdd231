@@ -34,12 +34,16 @@ header {
 header span{
     margin: 20px;
     color: var(--branco);
+    font-size: 1.5rem;
+    font-family: var(--fonte_titulo);
 }
 
 header img{
   
     border-radius: 50%;
-    width: 100%;
+    width: 100px;
+    height: auto;
+
 }
 
 #navegacao {
@@ -70,5 +74,5 @@ header img{
     background: none;
     border: none;
     color: var(--branco);
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
