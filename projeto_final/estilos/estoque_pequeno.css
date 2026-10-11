@@ -1,17 +1,18 @@
-
-
-:root{
-    --fonte_titulo: 'Poppins',Georgia, 'Times New Roman', Times, serif;
+:root {
+    --fonte_titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
     --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
     --azul: #1E3A5F;
-    --verde:#2E7D32;
+    --verde: #3eaa43;
     --laranja: #F9A825;
     --cinza: #F5F7FA;
     --branco: #fff;
 }
 
 
-header, nav, main, footer{
+header,
+nav,
+main,
+footer {
     min-width: 320px;
     margin: 0 auto;
 }
@@ -26,19 +27,19 @@ header {
     width: 100%;
     background-color: var(--azul);
     padding: 1.2rem;
-   
-   
+
+
 }
 
-header span{
+header span {
     margin: 20px;
     color: var(--branco);
     font-size: 1.5rem;
     font-family: var(--fonte_titulo);
 }
 
-header img{
-  
+header img {
+
     border-radius: 50%;
     width: 100px;
     height: auto;
@@ -47,9 +48,10 @@ header img{
 
 #navegacao {
     display: none;
-    
+
 }
-#navegacao.aberto{
+
+#navegacao.aberto {
     display: block;
     text-align: center;
     border-top: 1px solid var(--cinza);
@@ -60,19 +62,20 @@ header img{
     list-style: none;
     margin: 10px 0;
 }
-.navegacao a{
+
+.navegacao a {
     text-decoration: none;
     color: var(--branco);
     padding: 5px;
     border-radius: 5px;
 }
 
-.navegacao a[aria-current]{
+.navegacao a[aria-current] {
     background-color: var(--cinza);
     color: var(--azul);
 }
 
-#menu_ham{
+#menu_ham {
     background: none;
     border: none;
     color: var(--branco);
@@ -80,11 +83,64 @@ header img{
 }
 
 
+/* MAIN */
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+#lista_de_produtos .cards {
+    border: 1px solid var(--azul);
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+
+
+
+}
+
+.saiba_mais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: 0.5s;
+   
+}
+.saiba_mais:hover{
+    transform: scale(1.1);
+}
+
+.botao {
+    display: flex;
+    margin: 0 auto;
+    background-color: var(--verde);
+    border: none;
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    transition: 0.5s;
+    
+    justify-content: center;
+
+}
+.botao:hover{
+    transform: scale(1.1);
+}
+
+
+
 /* FOOTER */
 
 
 
-#rodape{
+#rodape {
     background-color: var(--azul);
     display: flex;
     flex-direction: column;
@@ -92,16 +148,19 @@ header img{
     min-height: 500px;
     color: var(--branco);
     font-family: var(--fonte_corpo);
-    margin: 300px auto ;
-    
+    margin: 300px auto;
+
 }
 
-#empresa,#videos,#identificador,#diretos{
+#empresa,
+#videos,
+#identificador,
+#diretos {
     width: 90%;
     padding: 15px 0;
     border-bottom: 1px solid var(--cinza);
     margin-top: 50px;
-   
+
 }
 
 /* EMPRESAS */
@@ -152,20 +211,20 @@ header img{
 }
 
 
-#empresa > p,
-#empresa > h4 {
+#empresa>p,
+#empresa>h4 {
     margin: 0;
 }
 
 /* VIDEOS */
 
-#videos a{
+#videos a {
     text-decoration: none;
 }
 
 
 /* DIREITOS */
 
-#direitos{
+#direitos {
     padding: 15px;
 }

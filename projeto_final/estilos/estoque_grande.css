@@ -26,8 +26,21 @@
         gap: 50px;
     }
 
+    /* MAIN */
 
-
+    #lista_de_produtos{
+        display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+    }
+    #mensagem{
+        
+        font-size: 1.5rem;
+        text-align: center;
+        
+    }
+    .cards{
+        width: 500px;
+    }
 
 
 
