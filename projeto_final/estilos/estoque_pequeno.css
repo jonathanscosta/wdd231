@@ -90,6 +90,23 @@ h1 {
     margin: 30px;
 }
 
+#botoes {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#botao_todos {
+
+    
+    border: none;
+    background: none;
+}
+
+
 #lista_de_produtos .cards {
     border: 1px solid var(--azul);
     max-width: 90%;
@@ -111,9 +128,10 @@ h1 {
     cursor: pointer;
     margin: 20px auto;
     transition: 0.5s;
-   
+
 }
-.saiba_mais:hover{
+
+.saiba_mais:hover {
     transform: scale(1.1);
 }
 
@@ -126,11 +144,12 @@ h1 {
     width: 90%;
     border-radius: 20px;
     transition: 0.5s;
-    
+
     justify-content: center;
 
 }
-.botao:hover{
+
+.botao:hover {
     transform: scale(1.1);
 }
 

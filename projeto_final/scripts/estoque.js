@@ -22,6 +22,12 @@ menu_ham.addEventListener("click", () => {
 
 
 // MAIN
+const botoes = document.querySelector("#botoes");
+const botao_todos = document.querySelector("#botao_todos");
+botao_todos.textContent = "Todos os produtos"
+const botao_favorito = document.querySelector("#favoritos")
+botao_favorito.textContent = "todos os favoritos"
+
 
 
 

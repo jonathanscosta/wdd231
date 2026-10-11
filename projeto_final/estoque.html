@@ -1,88 +1,96 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Site das industrias wayne com o objetivo de controle de estoque e recursos, em que diferentes cargos tem diferentes acessos dentro do sistema">
-    <meta name="author" content="Francisco Jonathan Sousa da Costa">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Site das industrias wayne com o objetivo de controle de estoque e recursos, em que diferentes cargos tem diferentes acessos dentro do sistema">
+        <meta name="author" content="Francisco Jonathan Sousa da Costa">
 
-    <meta property="og:title" content="Wayne Corp, Sistema de Controle de estoque">
-    <meta property="og:description"
-        content="Sistema de controle de Estoque com o fito de organizar a empresa">
-    <meta property="og:image" content="https://jonathanscosta.github.io/wdd231/projeto_final/imagens/logo_wayne.webp">
-    <meta property="og:url" content="https://jonathanscosta.github.io/wdd231/projeto_final/index.html">
+        <meta property="og:title" content="Wayne Corp, Sistema de Controle de estoque">
+        <meta property="og:description" content="Sistema de controle de Estoque com o fito de organizar a empresa">
+        <meta property="og:image" content="https://jonathanscosta.github.io/wdd231/projeto_final/imagens/logo_wayne.webp">
+        <meta property="og:url" content="https://jonathanscosta.github.io/wdd231/projeto_final/index.html">
 
-    <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/estoque_pequeno.css">
-    <link rel="stylesheet" href="estilos/estoque_grande.css">
+        <link rel="stylesheet" href="estilos/normalize.css">
+        <link rel="stylesheet" href="estilos/estoque_pequeno.css">
+        <link rel="stylesheet" href="estilos/estoque_grande.css">
 
-    <link rel="icon" href="imagens/favicon.ico">
+        <link rel="icon" href="imagens/favicon.ico">
 
-    <title>Wayne Corp</title>
+        <title>Wayne Corp</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet">
 
-    <script type="module" src="scripts/estoque.js"></script>
-    
-
-</head>
-
-<body>
-    <header>
-        <a href="index.html"><img src="imagens/logo_wayne.webp" alt="logotipo da wayne corp" width="100"
-                height="100"></a>
-        <span>Wayne Corp</span>
-
-        <button id="menu_ham" type="button"></button>
+        <script type="module" src="scripts/estoque.js"></script>
 
 
-        <nav aria-label="Navegação principal" class="navegacao" id="navegacao">
-            <ul>
-                <li><a href="index.html" >Dashboard</a></li>
-                <li><a href="estoque.html" aria-current="page" class="destaque">Estoque</a></li>
-                <li><a href="processos.html">Processos</a></li>
-            </ul>
-        </nav>
-    </header>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="imagens/logo_wayne.webp" alt="logotipo da wayne corp" width="100"
+                    height="100"></a>
+            <span>Wayne Corp</span>
+
+            <button id="menu_ham" type="button"></button>
+
+
+            <nav aria-label="Navegação principal" class="navegacao" id="navegacao">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="estoque.html" aria-current="page" class="destaque">Estoque</a></li>
+                    <li><a href="processos.html">Processos</a></li>
+                </ul>
+            </nav>
+        </header>
 
 
 
-    <main>
-        <h1>Estoque</h1>
+        <main>
+            <h1>Estoque</h1>
+            <div id="botoes">
+                <button id="botao_todos">
 
-        <p id="mensagem">Carregando produtos...</p>
+                </button>
 
-        <div id="lista_de_produtos">
+                <button id="favoritos">
 
-        </div>
-    </main>
+                </button>
+            </div>
 
-    <footer id="rodape">
+            <p id="mensagem">Carregando produtos...</p>
 
-        <div id="empresa">
+            <div id="lista_de_produtos">
 
-        </div>
+            </div>
+        </main>
 
-        <div id="videos">
+        <footer id="rodape">
 
-        </div>
+            <div id="empresa">
 
-        <div id="identificador">
+            </div>
 
-        </div>
+            <div id="videos">
 
-        <div id="direitos">
+            </div>
 
-        </div>
+            <div id="identificador">
 
-    </footer>
-</body>
+            </div>
 
-</html>
+            <div id="direitos">
+
+            </div>
+
+        </footer>
+    </body>
+
+    </html>
