@@ -329,9 +329,8 @@ header img {
 }
 
 
-/* ==========================================
    PÁGINA SOBRE E FORMULÁRIO DE PARCERIA
-   ========================================== */
+   
 
 .apresentacao_empresa,
 #area_formulario,
@@ -350,7 +349,7 @@ header img {
 #botao_parceria,
 #area_formulario button {
     padding: 12px 20px;
-    background-color: var(--verde);
+    background-color: var(--azul);
     color: var(--branco);
     border: none;
     border-radius: 6px;
