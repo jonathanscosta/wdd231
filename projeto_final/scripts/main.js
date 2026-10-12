@@ -22,13 +22,23 @@ menu_ham.addEventListener("click", () => {
 // MAIN COM DASHBOAD E MENU LATERAL
 
 
-// ELEMENTOS DO DASHBOARD
+
+ // ELEMENTOS DO DASHBOARD
 
 const dashboard = document.querySelector("#dashboard");
 const menu_lateral = document.querySelector("#menu_lateral");
 const menu = document.querySelector("#menu");
 const cards_dashboard = document.querySelector("#cards_dashboard");
+
 const controle_estoque = document.querySelector("#controle_estoque");
+
+const produtos_mais_vendidos = document.querySelector(
+    "#produtos_mais_vendidos"
+);
+
+// CHAVE DO LOCALSTORAGE UTILIZADA NA PÁGINA ESTOQUE
+
+const chave_favoritos = "wayne_corp_favoritos";
 
 // ORGANIZAR O MENU E A ÁREA DOS CARDS
 
@@ -36,73 +46,167 @@ menu_lateral.appendChild(menu);
 dashboard.appendChild(menu_lateral);
 dashboard.appendChild(cards_dashboard);
 
-// BUSCAR E EXIBIR OS PRODUTOS DA API
+
+// FUNÇÃO: CRIAR UM CARD DE PRODUTO
+
+function criar_card(produto) {
+
+    // Criar o card principal
+    const card = document.createElement("article");
+    card.classList.add("card_estoque");
+
+    // Criar o título
+    const titulo = document.createElement("h2");
+    titulo.textContent = produto.title;
+
+    // Criar a imagem
+    const imagem = document.createElement("img");
+    imagem.src = produto.images[0];
+    imagem.alt = produto.title;
+    imagem.loading = "lazy";
+
+    // Criar a quantidade em estoque
+    const quantidade = document.createElement("p");
+    quantidade.textContent = `Quantidade: ${produto.stock} unidades`;
+
+    // Criar o status do estoque
+    const status = document.createElement("p");
+    status.classList.add("status_estoque");
+
+    if (produto.stock < 50) {
+
+        status.textContent = "Reabastecer";
+        status.classList.add("reabastecer");
+
+    } else {
+
+        status.textContent = "Estoque OK";
+        status.classList.add("estoque_ok");
+    }
+
+    // Adicionar os elementos ao card
+    card.appendChild(titulo);
+    card.appendChild(imagem);
+    card.appendChild(quantidade);
+    card.appendChild(status);
+
+    return card;
+}
+
+
+// FUNÇÃO: EXIBIR UMA LISTA DE PRODUTOS NO DASHBOARD
+
+function mostrar_cards(lista) {
+
+    // Limpar os cards ou mensagens anteriores
+    cards_dashboard.innerHTML = "";
+
+    // Criar um card para cada produto
+    lista.forEach((produto) => {
+
+        const card = criar_card(produto);
+
+        cards_dashboard.appendChild(card);
+    });
+}
+
+
+// FUNÇÃO: MOSTRAR TODOS OS PRODUTOS DO ESTOQUE
 
 async function mostrar_estoque() {
+
     cards_dashboard.innerHTML = "<p>Carregando produtos...</p>";
 
     try {
+
         const produtos = await bucar_produtos();
 
-        // Limpar a mensagem de carregamento
-        cards_dashboard.innerHTML = "";
-
-        // Criar um card para cada produto
-
-    
-        produtos.forEach((produto) => {
-            const card = document.createElement("article");
-            card.classList.add("card_estoque");
-
-            // TÍTULO DO PRODUTO
-            const titulo = document.createElement("h2");
-            titulo.textContent = produto.title;
-
-            // IMAGEM DO PRODUTO
-            const imagem = document.createElement("img");
-            imagem.src = produto.images[0];
-            imagem.alt = produto.title;
-            imagem.loading = "lazy";
-
-            // QUANTIDADE EM ESTOQUE
-            const quantidade = document.createElement("p");
-            quantidade.textContent = `Quantidade: ${produto.stock} unidades`;
-
-            // STATUS DO ESTOQUE
-            const status = document.createElement("p");
-            status.classList.add("status_estoque");
-
-            if (produto.stock < 50) {
-                status.textContent = "Reabastecer";
-                status.classList.add("reabastecer");
-            } else {
-                status.textContent = "Estoque OK";
-                status.classList.add("estoque_ok");
-            }
-
-            // ADICIONAR OS ELEMENTOS AO CARD
-            card.appendChild(titulo);
-            card.appendChild(imagem);
-            card.appendChild(quantidade);
-            card.appendChild(status);
-
-            // ADICIONAR O CARD AO DASHBOARD
-            cards_dashboard.appendChild(card);
-        });
+        // Exibir todos os produtos usando os cards padronizados
+        mostrar_cards(produtos);
 
     } catch (erro) {
+
         console.error("Erro ao carregar o estoque:", erro);
+
         cards_dashboard.innerHTML =
             "<p>Não foi possível carregar os produtos. Tente novamente.</p>";
     }
 }
 
-// EXIBIR OS PRODUTOS AO CLICAR NO MENU
+
+// FUNÇÃO: MOSTRAR OS PRODUTOS MAIS VENDIDOS
+
+async function mostrar_mais_vendidos() {
+
+    cards_dashboard.innerHTML =
+        "<p>Carregando produtos mais vendidos...</p>";
+
+    try {
+
+        // Buscar os produtos da API
+        const produtos = await bucar_produtos();
+
+        // Recuperar os IDs salvos na página de estoque
+        const favoritos_salvos = localStorage.getItem(chave_favoritos);
+
+        // Transformar o conteúdo salvo em uma lista
+        const favoritos = favoritos_salvos
+            ? JSON.parse(favoritos_salvos)
+            : [];
+
+        // Verificar se o conteúdo salvo é uma lista válida
+        if (!Array.isArray(favoritos)) {
+
+            throw new Error("A lista de produtos mais vendidos é inválida.");
+        }
+
+        // Usar filter() para selecionar os produtos marcados
+        const lista_mais_vendidos = produtos.filter(
+            (produto) => favoritos.includes(produto.id)
+        );
+
+        // Verificar se existem produtos selecionados
+        if (lista_mais_vendidos.length === 0) {
+
+            cards_dashboard.innerHTML =
+                "<p>Nenhum produto foi selecionado como mais vendido. " +
+                "Acesse a página Estoque e selecione os produtos desejados.</p>";
+
+            return;
+        }
+
+        // Exibir somente os produtos mais vendidos
+        mostrar_cards(lista_mais_vendidos);
+
+    } catch (erro) {
+
+        console.error("Erro ao carregar os mais vendidos:", erro);
+
+        cards_dashboard.innerHTML =
+            "<p>Não foi possível carregar os produtos mais vendidos. Tente novamente.</p>";
+    }
+}
+
+
+// EVENTO: CONTROLE DE ESTOQUE
 
 controle_estoque.addEventListener("click", (evento) => {
+
     evento.preventDefault();
+
     mostrar_estoque();
 });
+
+
+// EVENTO: PRODUTOS MAIS VENDIDOS
+
+produtos_mais_vendidos.addEventListener("click", (evento) => {
+
+    evento.preventDefault();
+
+    mostrar_mais_vendidos();
+});
+
 
 
 

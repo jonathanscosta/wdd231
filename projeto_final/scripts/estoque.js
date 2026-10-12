@@ -39,8 +39,8 @@ const descricao_produto = document.querySelector("#descricao_produto");
 const fechar_modal = document.querySelector("#fechar_modal");
 
 // Definir os textos dos botões
-botao_todos.textContent = "Todos os produtos";
-botao_favorito.textContent = "Todos os favoritos";
+botao_todos.textContent = "Todos os Produtos";
+botao_favorito.textContent = "Mais Vendidos";
 
 // Guardar todos os produtos recebidos da API
 let produtos = [];
@@ -179,9 +179,9 @@ function mostrar_lista(lista) {
 
         // Definir o texto correto do botão
         if (ja_e_favorito) {
-            botao.textContent = "Sair dos favoritos";
+            botao.textContent = "Sair dos Mais Vendidos";
         } else {
-            botao.textContent = "Favoritar";
+            botao.textContent = "Mais Vendidos";
         }
 
         // Adicionar o evento de clique ao botão
@@ -249,7 +249,7 @@ function atualizar_lista() {
 
         // Atualizar a mensagem
         mensagem.textContent =
-            `${produtos_favoritos.length} produtos favoritos`;
+            `${produtos_favoritos.length} produtos mais vendidos`;
 
         // Informar quando não houver favoritos
         if (produtos_favoritos.length === 0) {
