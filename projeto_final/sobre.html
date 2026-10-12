@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Site das industrias wayne com o objetivo de controle de estoque e recursos, em que diferentes cargos tem diferentes acessos dentro do sistema">
+    <meta name="author" content="Francisco Jonathan Sousa da Costa">
+
+    <meta property="og:title" content="Wayne Corp, Sistema de Controle de estoque">
+    <meta property="og:description" content="Sistema de controle de Estoque com o fito de organizar a empresa">
+    <meta property="og:image" content="https://jonathanscosta.github.io/wdd231/projeto_final/imagens/logo_wayne.webp">
+    <meta property="og:url" content="https://jonathanscosta.github.io/wdd231/projeto_final/index.html">
+
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css">
+
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <title>Wayne Corp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script type="module" src="scripts/sobre.js "></script>
+
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="imagens/logo_wayne.webp" alt="logotipo da wayne corp" width="70" height="70"></a>
+        <span>Wayne Corp</span>
+
+        <button id="menu_ham" type="button"></button>
+
+
+        <nav aria-label="Navegação principal" class="navegacao" id="navegacao">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="Sobre.html" aria-current="page" class="destaque">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main id="pagina_sobre">
+
+        <section class="apresentacao_empresa">
+            <h1>Sobre a Wayne Corp</h1>
+
+            <p>
+                A Wayne Corp é uma empresa fictícia criada para demonstrar
+                como a tecnologia pode facilitar o controle de estoque,
+                a organização de produtos e a gestão de recursos.
+            </p>
+
+            <p>
+                Nosso sistema busca tornar as informações mais acessíveis,
+                ajudando a identificar produtos que precisam de reposição
+                e facilitando o acompanhamento do estoque.
+            </p>
+
+            <button type="button" id="botao_parceria">
+                Seja parceiro
+            </button>
+        </section>
+
+        <section id="area_formulario" hidden>
+            <h2>Formulário de parceria</h2>
+
+            <p>
+                Preencha os dados abaixo para registrar seu interesse
+                em uma parceria com a Wayne Corp.
+            </p>
+
+            <form action="agradecimento.html" method="get">
+
+                <label for="empresa_form">Nome da empresa:</label>
+                <input type="text" id="empresa_form" name="empresa" required>
+
+                <label for="responsavel">Nome do responsável:</label>
+                <input type="text" id="responsavel" name="responsavel" required>
+
+                <label for="email">E-mail comercial:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone comercial:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="segmento">Segmento da empresa:</label>
+                <select id="segmento" name="segmento" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Comércio">Comércio</option>
+                    <option value="Indústria">Indústria</option>
+                    <option value="Distribuição">Distribuição</option>
+                    <option value="Outro">Outro</option>
+                </select>
+
+                <label for="mensagem">Conte um pouco sobre seu interesse:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">
+                    Enviar formulário
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer id="rodape">
+
+        <div id="empresa">
+
+        </div>
+
+        <div id="videos">
+
+        </div>
+
+        <div id="identificador">
+
+        </div>
+
+        <div id="direitos">
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

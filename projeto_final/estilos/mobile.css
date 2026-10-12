@@ -327,3 +327,76 @@ header img {
 #direitos {
     padding: 15px;
 }
+
+
+/* ==========================================
+   PÁGINA SOBRE E FORMULÁRIO DE PARCERIA
+   ========================================== */
+
+.apresentacao_empresa,
+#area_formulario,
+.cartao_agradecimento {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.apresentacao_empresa p {
+    font-size: 1.5rem;
+}
+
+#botao_parceria,
+#area_formulario button {
+    padding: 12px 20px;
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#area_formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#area_formulario input,
+#area_formulario select,
+#area_formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+#area_formulario[hidden] {
+    display: none;
+}
+
+.dado_solicitacao {
+    padding: 12px;
+    margin: 12px 0;
+    border-left: 4px solid var(--azul);
+    background-color: var(--cinza);
+    overflow-wrap: anywhere;
+}
+
+.cartao_agradecimento a {
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+     background-color: var(--cinza);
+    
+    
+}
+.cartao_agradecimento a :hover{
+    color: var(--laranja);
+    margin-top: 50px;
+   
+}
