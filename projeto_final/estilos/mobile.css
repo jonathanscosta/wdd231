@@ -120,7 +120,7 @@ header img {
     border: 1px solid var(--cinza);
     border-radius: 12px;
     background-color: var(--branco);
-    box-shadow: 0 3px 10px var(--vermelho);
+    box-shadow: 0 3px 10px var(--verde);
 }
 
 .card_estoque h2 {

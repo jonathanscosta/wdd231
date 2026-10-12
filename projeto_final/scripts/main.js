@@ -59,11 +59,6 @@ function criar_card(produto) {
     const titulo = document.createElement("h2");
     titulo.textContent = produto.title;
 
-    // Criar a imagem
-    const imagem = document.createElement("img");
-    imagem.src = produto.images[0];
-    imagem.alt = produto.title;
-    imagem.loading = "lazy";
 
     // Criar a quantidade em estoque
     const quantidade = document.createElement("p");
@@ -86,7 +81,6 @@ function criar_card(produto) {
 
     // Adicionar os elementos ao card
     card.appendChild(titulo);
-    card.appendChild(imagem);
     card.appendChild(quantidade);
     card.appendChild(status);
 
