@@ -21,6 +21,12 @@
     #navegacao{
         display: flex;
     }
+    #navegacao li{
+        transition: 0.5s;
+    }
+    #navegacao li:hover{
+        transform: scale(1.1);
+    }
     #navegacao ul{
         display: flex;
         gap: 50px;
