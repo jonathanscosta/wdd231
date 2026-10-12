@@ -1,14 +1,14 @@
 :root {
     --fonte_titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
     --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
-    --azul: #182f4c;
+    --azul: #162a44;
     --verde: #3eaa47;
     --laranja: #F9A825;
     --cinza: #F5F7FA;
     --branco: #fff;
     --amarelo: #f0f64a;
     --cinza_escuro: #3f3636;
-   
+
 }
 
 
@@ -30,7 +30,7 @@ header {
     width: 100%;
     background-color: var(--azul);
     padding: 1.2rem;
-    
+
 
 
 }
@@ -89,7 +89,7 @@ header img {
 
 /* MAIN */
 
-main{
+main {
     min-height: 700px;
 }
 
@@ -337,7 +337,7 @@ h1 {
     font-size: 1.8rem;
     cursor: pointer;
     transition: background-color 0.2s ease,
-                transform 0.2s ease;
+        transform 0.2s ease;
 }
 
 .fechar_modal:hover {
@@ -374,6 +374,7 @@ h1 {
 
 /* Respeitar quem prefere movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
+
     #modal_produto[open] .conteudo_modal,
     #modal_produto::backdrop {
         animation: none;
