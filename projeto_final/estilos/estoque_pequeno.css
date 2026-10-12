@@ -2,10 +2,12 @@
     --fonte_titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
     --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
     --azul: #1E3A5F;
-    --verde: #3eaa43;
+    --verde: #3eaa47;
     --laranja: #F9A825;
     --cinza: #F5F7FA;
     --branco: #fff;
+    --amarelo: #f0f64a;
+    --cinza_escuro: #3f3636;
 }
 
 
@@ -100,10 +102,29 @@ h1 {
 }
 
 #botao_todos {
-
-    
     border: none;
     background: none;
+    background-color: var(--amarelo);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#botao_todos:hover {
+    transform: scale(1.1);
+}
+
+#favoritos {
+    border: none;
+    background: none;
+    background-color: var(--amarelo);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#favoritos:hover {
+    transform: scale(1.1);
 }
 
 
@@ -128,6 +149,11 @@ h1 {
     cursor: pointer;
     margin: 20px auto;
     transition: 0.5s;
+    color: var(--cinza_escuro);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: var(--cinza);
 
 }
 

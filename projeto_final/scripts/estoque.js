@@ -51,6 +51,9 @@ async function mostrar_produtos() {
             const quantidade = document.createElement("p");
             quantidade.textContent = `Quantidade: ${produto.stock} unidades`
 
+            const categoria = document.createElement("p");
+            categoria.textContent = `Categoria: ${produto.category}`
+
 
             const saiba_mais = document.createElement("button")
             saiba_mais.classList.add("saiba_mais")
@@ -63,6 +66,7 @@ async function mostrar_produtos() {
             card.appendChild(titulo)
             card.appendChild(preco)
             card.appendChild(quantidade)
+            card.appendChild(categoria)
             card.appendChild(saiba_mais)
             card.appendChild(botao)
 
