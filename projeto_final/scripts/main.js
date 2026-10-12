@@ -1,4 +1,4 @@
-
+import { bucar_produtos } from "./estoque.mjs";
 
 // MENU HAMBÚRGUER
 
@@ -21,18 +21,89 @@ menu_ham.addEventListener("click", () => {
 
 // MAIN COM DASHBOAD E MENU LATERAL
 
-const dashboar = document.querySelector("#dashboard")
 
+// ELEMENTOS DO DASHBOARD
+
+const dashboard = document.querySelector("#dashboard");
 const menu_lateral = document.querySelector("#menu_lateral");
 const menu = document.querySelector("#menu");
-menu_lateral.appendChild(menu)
 const cards_dashboard = document.querySelector("#cards_dashboard");
-const h1 = document.createElement("h1")
-h1.textContent = "testando a div"
-cards_dashboard.appendChild(h1);
+const controle_estoque = document.querySelector("#controle_estoque");
 
-dashboar.appendChild(menu_lateral)
-dashboar.appendChild(cards_dashboard)
+// ORGANIZAR O MENU E A ÁREA DOS CARDS
+
+menu_lateral.appendChild(menu);
+dashboard.appendChild(menu_lateral);
+dashboard.appendChild(cards_dashboard);
+
+// BUSCAR E EXIBIR OS PRODUTOS DA API
+
+async function mostrar_estoque() {
+    cards_dashboard.innerHTML = "<p>Carregando produtos...</p>";
+
+    try {
+        const produtos = await bucar_produtos();
+
+        // Limpar a mensagem de carregamento
+        cards_dashboard.innerHTML = "";
+
+        // Criar um card para cada produto
+
+    
+        produtos.forEach((produto) => {
+            const card = document.createElement("article");
+            card.classList.add("card_estoque");
+
+            // TÍTULO DO PRODUTO
+            const titulo = document.createElement("h2");
+            titulo.textContent = produto.title;
+
+            // IMAGEM DO PRODUTO
+            const imagem = document.createElement("img");
+            imagem.src = produto.images[0];
+            imagem.alt = produto.title;
+            imagem.loading = "lazy";
+
+            // QUANTIDADE EM ESTOQUE
+            const quantidade = document.createElement("p");
+            quantidade.textContent = `Quantidade: ${produto.stock} unidades`;
+
+            // STATUS DO ESTOQUE
+            const status = document.createElement("p");
+            status.classList.add("status_estoque");
+
+            if (produto.stock < 50) {
+                status.textContent = "Reabastecer";
+                status.classList.add("reabastecer");
+            } else {
+                status.textContent = "Estoque OK";
+                status.classList.add("estoque_ok");
+            }
+
+            // ADICIONAR OS ELEMENTOS AO CARD
+            card.appendChild(titulo);
+            card.appendChild(imagem);
+            card.appendChild(quantidade);
+            card.appendChild(status);
+
+            // ADICIONAR O CARD AO DASHBOARD
+            cards_dashboard.appendChild(card);
+        });
+
+    } catch (erro) {
+        console.error("Erro ao carregar o estoque:", erro);
+        cards_dashboard.innerHTML =
+            "<p>Não foi possível carregar os produtos. Tente novamente.</p>";
+    }
+}
+
+// EXIBIR OS PRODUTOS AO CLICAR NO MENU
+
+controle_estoque.addEventListener("click", (evento) => {
+    evento.preventDefault();
+    mostrar_estoque();
+});
+
 
 
 
@@ -59,8 +130,8 @@ linha_empresa.classList.add("linha-empresa");
 const img = document.createElement("img");
 img.src = "imagens/logo_wayne.webp";
 img.alt = "Logo da Wayne Corp";
-img.width = 100;
-img.height = 100;
+img.width = 70;
+img.height = 70;
 img.loading = "lazy";
 
 const titulo = document.createElement("h3");
@@ -120,7 +191,7 @@ const link = document.createElement("h3");
 link.textContent = "Links dos vídeos";
 
 const link_video = document.createElement("a");
-link_video.href ="https://www.youtube.com/watch?v=RELXqbIH4MY&t=347s";
+link_video.href = "https://www.youtube.com/watch?v=RELXqbIH4MY&t=347s";
 link_video.target = "_blank";
 link_video.textContent = "Vídeo de demonstração (JavaScript)";
 

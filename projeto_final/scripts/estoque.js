@@ -342,8 +342,8 @@ linha_empresa.classList.add("linha-empresa");
 const img = document.createElement("img");
 img.src = "imagens/logo_wayne.webp";
 img.alt = "Logo da Wayne Corp";
-img.width = 100;
-img.height = 100;
+img.width = 70;
+img.height = 70;
 img.loading = "lazy";
 
 const titulo_empresa = document.createElement("h3");

@@ -1,13 +1,14 @@
 :root {
     --fonte_titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
     --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
-    --azul: #1E3A5F;
+    --azul: #182f4c;
     --verde: #3eaa47;
     --laranja: #F9A825;
     --cinza: #F5F7FA;
     --branco: #fff;
     --amarelo: #f0f64a;
     --cinza_escuro: #3f3636;
+   
 }
 
 
@@ -29,6 +30,7 @@ header {
     width: 100%;
     background-color: var(--azul);
     padding: 1.2rem;
+    
 
 
 }
@@ -43,7 +45,7 @@ header span {
 header img {
 
     border-radius: 50%;
-    width: 100px;
+    width: 70px;
     height: auto;
 
 }
@@ -86,6 +88,10 @@ header img {
 
 
 /* MAIN */
+
+main{
+    min-height: 700px;
+}
 
 h1 {
     text-align: center;

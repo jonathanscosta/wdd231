@@ -1,17 +1,19 @@
-
-
-:root{
-    --fonte_titulo: 'Poppins',Georgia, 'Times New Roman', Times, serif;
+:root {
+    --fonte_titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
     --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
     --azul: #1E3A5F;
-    --verde:#2E7D32;
+    --verde: #2E7D32;
     --laranja: #F9A825;
     --cinza: #F5F7FA;
     --branco: #fff;
+    --vermelho: #a01616;
 }
 
 
-header, nav, main, footer{
+header,
+nav,
+main,
+footer {
     min-width: 320px;
     margin: 0 auto;
 }
@@ -26,30 +28,31 @@ header {
     width: 100%;
     background-color: var(--azul);
     padding: 1.2rem;
-   
-   
+
+
 }
 
-header span{
+header span {
     margin: 20px;
     color: var(--branco);
     font-size: 1.5rem;
     font-family: var(--fonte_titulo);
 }
 
-header img{
-  
+header img {
+
     border-radius: 50%;
-    width: 100px;
+    width: 70px;
     height: auto;
 
 }
 
 #navegacao {
     display: none;
-    
+
 }
-#navegacao.aberto{
+
+#navegacao.aberto {
     display: block;
     text-align: center;
     border-top: 1px solid var(--cinza);
@@ -60,31 +63,183 @@ header img{
     list-style: none;
     margin: 10px 0;
 }
-.navegacao a{
+
+.navegacao a {
     text-decoration: none;
     color: var(--branco);
     padding: 5px;
     border-radius: 5px;
 }
 
-.navegacao a[aria-current]{
+.navegacao a[aria-current] {
     background-color: var(--cinza);
     color: var(--azul);
 }
 
-#menu_ham{
+#menu_ham {
     background: none;
     border: none;
     color: var(--branco);
     font-size: 2.5rem;
 }
 
+/* MAIN */
+
+#menu_lateral {
+    min-width: 50px;
+    background-color: var(--cinza);
+}
+
+#menu_lateral li {
+    margin: 20px;
+    list-style: none;
+
+}
+
+#menu_lateral a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--azul);
+
+}
+
+/* ÁREA DOS CARDS DO DASHBOARD */
+
+#cards_dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD DE CADA PRODUTO */
+
+.card_estoque {
+    padding: 18px;
+    border: 1px solid var(--cinza);
+    border-radius: 12px;
+    background-color: var(--branco);
+    box-shadow: 0 3px 10px var(--vermelho);
+}
+
+.card_estoque h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+/* IMAGEM DO PRODUTO */
+
+.card_estoque img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+/* STATUS DO ESTOQUE */
+
+.status_estoque {
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.reabastecer {
+    color: var(--vermelho);
+    background-color: var(--cinza);
+}
+
+.estoque_ok {
+    background-color: var(--cinza);
+}
+/* TELA INICIAL DO DASHBOARD */
+
+#cards_dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-content: start;
+}
+
+/* ÁREA DE BOAS-VINDAS */
+
+#boas_vindas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: 350px;
+    padding: 30px 20px;
+
+    background-color: var(--branco);
+    border-radius: 50px;
+}
+
+/* ÍCONE */
+
+.icone_boas_vindas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    background-color: var(--cinza);
+    color: var(--azul);
+
+    border-radius: 50%;
+    font-size: 3rem;
+}
+
+/* TÍTULO */
+
+#boas_vindas h2 {
+    color: var(--azul);
+    font-family: var(--fonte_titulo);
+    margin-bottom: 5px;
+}
+
+/* TEXTOS */
+
+
+
+/* INSTRUÇÃO */
+
+.instrucao_dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 15px;
+    padding: 10px 15px;
+
+    background-color: var(--cinza);
+    border-left: 4px solid var(--laranja);
+    border-radius: 6px;
+}
+
+.instrucao_dashboard span {
+    color: var(--azul);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
 
 /* FOOTER */
 
 
 
-#rodape{
+#rodape {
     background-color: var(--azul);
     display: flex;
     flex-direction: column;
@@ -92,16 +247,19 @@ header img{
     min-height: 500px;
     color: var(--branco);
     font-family: var(--fonte_corpo);
-    margin: 300px auto ;
-    
+    margin: 300px auto;
+
 }
 
-#empresa,#videos,#identificador,#diretos{
+#empresa,
+#videos,
+#identificador,
+#diretos {
     width: 90%;
     padding: 15px 0;
     border-bottom: 1px solid var(--cinza);
     margin-top: 50px;
-   
+
 }
 
 /* EMPRESAS */
@@ -121,8 +279,8 @@ header img{
 }
 
 .linha-empresa img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     border-radius: 50%;
 }
@@ -152,20 +310,20 @@ header img{
 }
 
 
-#empresa > p,
-#empresa > h4 {
+#empresa>p,
+#empresa>h4 {
     margin: 0;
 }
 
 /* VIDEOS */
 
-#videos a{
+#videos a {
     text-decoration: none;
 }
 
 
 /* DIREITOS */
 
-#direitos{
+#direitos {
     padding: 15px;
 }

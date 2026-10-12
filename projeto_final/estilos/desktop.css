@@ -1,45 +1,87 @@
-@media (min-width: 700px){
+@media (min-width: 700px) {
 
 
     /* HEARDER */
 
-    header,nav,main,footer{
+    header,
+    nav,
+    main,
+    footer {
         max-width: 98%;
-        
-        
+
+
     }
 
-    header{
+    header {
         display: flex;
         justify-content: space-evenly;
     }
 
-    #menu_ham{
+    #menu_ham {
         display: none;
     }
 
-    #navegacao{
+    #navegacao {
         display: flex;
     }
-    #navegacao ul{
+
+    #navegacao ul {
         display: flex;
         gap: 50px;
     }
 
 
     /* MAIN */
-    main{
+    main {
         background-color: var(--cinza);
     }
-    #dashboard{
+
+    #dashboard {
         display: grid;
         grid-template-columns: 1fr 4fr;
+        min-height: 700px;
     }
 
-    #menu_lateral{
-        border: 2px solid var(--laranja);
+    #menu_lateral {
+
         min-height: 100px;
+
     }
+
+    #menu_lateral a {
+        transition: 0.5s;
+    }
+
+    #menu_lateral a:hover {
+        color: var(--laranja);
+    }
+
+    #menu_lateral li {
+        transition: 0.5s;
+    }
+
+    #menu_lateral li:hover {
+        transform: scale(1.1);
+    }
+
+    #cards_dashboard {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: center;
+    }
+
+    #cards_dashboard {
+        border: 2px solid var(--laranja);
+        border-radius: 50px;
+        margin: 0 10px 0 0;
+        padding: 50px;
+    }
+
+    #boas_vindas {
+        grid-column: 1 / -1;
+        min-height: 500px;
+        margin: 0;
+    }
+
 
 
 
@@ -54,17 +96,20 @@
         margin-top: 0;
     }
 
-    #empresa, #videos, #identificador{
+    #empresa,
+    #videos,
+    #identificador {
         border: none;
     }
-    #direitos{
+
+    #direitos {
         grid-column: 1/4;
         text-align: center;
         border-top: 1px solid var(--cinza);
         margin: 0 100px;
     }
 
-    #empresa{
+    #empresa {
         margin-left: 30px;
     }
 
