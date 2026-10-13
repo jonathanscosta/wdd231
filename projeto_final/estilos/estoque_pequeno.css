@@ -1,6 +1,6 @@
 :root {
-    --fonte_titulo: 'Poppins', Georgia, 'Times New Roman', Times, serif;
-    --fonte_corpo: 'Roboto', Georgia, 'Times New Roman', Times, serif;
+    --fonte_titulo:  Georgia, 'Times New Roman', Times, serif;
+    --fonte_corpo:  Georgia, 'Times New Roman', Times, serif;
     --azul: #162a44;
     --verde: #3eaa47;
     --laranja: #F9A825;
