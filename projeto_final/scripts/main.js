@@ -289,7 +289,7 @@ const link = document.createElement("h3");
 link.textContent = "Links dos vídeos";
 
 const link_video = document.createElement("a");
-link_video.href = "https://www.youtube.com/watch?v=RELXqbIH4MY&t=347s";
+link_video.href = "https://youtu.be/IEiVlAELLIw";
 link_video.target = "_blank";
 link_video.textContent = "Vídeo de demonstração (JavaScript)";
 
